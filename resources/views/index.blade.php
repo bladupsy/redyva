@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{mix('css/app.css')}}" type="text/css">  
     <title>RedyVa</title>
     <style>
         #hero {
@@ -95,7 +95,7 @@
           </div>
 
         </section>
-        <script src="{{asset('js/app.js')}}"></script>
+        <script src="{{mix('js/app.js')}}" type="text/javascript"></script>
    </body>
 
        
