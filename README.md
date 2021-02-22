@@ -60,3 +60,35 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Sección Frontend realizada por Gise
+
+Para utilzar bootstrap he instalado atraves de composer los paquetes:
+Instalación paquete Laravel/ui
+   composer require laravel/ui
+Después de instalar el paquete anterior, estamos listos para instalar Boostrap 4 en nuestro proyecto.
+
+Instalación Boostrap 4:
+
+php artisan ui bootstrap
+
+Recurso obtenido en [Codersfree](https://codersfree.com/blog/como-instalar-bootstrap-4-en-tu-proyecto-laravel-7).
+
+Para poder instalar todas las dependencias que necesitamos, debemos instalar npm en nuestro proyecto (para instalar npm debemos tener instalado Node Js en nuestra computadora):
+Instalación npm
+
+  npm install
+
+Compilar nuestros archivos
+
+  npm run dev
+
+Listo, ya tenemos nuestros archivos js y css listo para utilizar.
+
+Para poder usarlos debemos escribir en el head de nuestra plantilla lo siguiente:
+
+<link rel="stylesheet" href="{{asset('css/app.css')}}">
+
+Y justo antes de finalizar el body lo siguiente:
+
+<script src="{{asset('js/app.js')}}"></script>
