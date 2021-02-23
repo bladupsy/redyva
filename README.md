@@ -73,9 +73,9 @@ Para clonar en .env
  -cp .env.example .env
 
 Sin datos comprobables o entendibles:
-3) php artisan key:generate 
+<pre><code> `php artisan key:generate ` </code></pre>
 
-` Código en ASCII: alt96
+
 
 Ejemplo:
 
