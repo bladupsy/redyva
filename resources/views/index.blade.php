@@ -33,7 +33,7 @@
           #naranja {
               background-color: #E94E1A;
               background-size: cover;
-              padding-top: 200px;
+              padding-top: 150px;
               min-height: 700px;
           }
           .texto {
@@ -42,12 +42,12 @@
                 font-size: 45px;
                 text-align: left;
                 font-weight: bold;
-            
                 line-height: 46px;
           }
           #etiqueta {
               font-size: 30px;
               color: white;
+              font-weight: italic;
               
           }
         </style>
@@ -96,12 +96,12 @@
             </article>
             <article class="container-fluid" id="naranja">
                 <div class="container-sm">
-                    <hr style=" widht: 30px; height: 5px; background-color: #B7451C;" >
+                    <hr style=" widht: 175px; height: 5px; background-color: #B7451C;" >
                     <a id="etiqueta">desde el 2020</a>
                    
-                <p class="texto text-light">Nos encontramos organizaciones <br>sociales, cooperativas productivas,<br> trabajadores y trabajadoras del agro, todos bajo la consigna de proveer alimentos sanos.</p>
-                <hr style=" widht: 30px; height: 5px; background-color: #B7451C;" >
-                
+                <p class="texto text-light">Nos encontramos organizaciones <br>sociales, cooperativas productivas,<br> trabajadores y trabajadoras del agro, todos bajo la consigna de proveer alimentos sanos.</p><br><br><br><br><br><br><br><br><br><br><br><br>
+                <hr style=" widht: 175px; height: 5px; background-color: #B7451C;" >
+                <a id="etiqueta">conoce más</a>
                 </div>
             </article>
    
