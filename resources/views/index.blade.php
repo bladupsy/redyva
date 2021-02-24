@@ -19,7 +19,7 @@
             .btn {
                 font-size: 18px;
             }
-            p {
+            #text {
                 font-family: 'Montserrat', sans-serif;
                 position: absolute;
                 width: 743px;
@@ -35,6 +35,20 @@
               background-size: cover;
               padding-top: 200px;
               min-height: 700px;
+          }
+          .texto {
+            position: absolute;
+                width: 800px;
+                font-size: 45px;
+                text-align: left;
+                font-weight: bold;
+            
+                line-height: 46px;
+          }
+          #etiqueta {
+              font-size: 30px;
+              color: white;
+              
           }
         </style>
     </head>
@@ -63,7 +77,7 @@
                     <a class="btn btn-light text-orange rounded-pill">Somos una red que<strong> produce, distribuye y comercializa</strong> con sentido político</a>
                     <br>
                     <br>
-                    <p class="text-light">Queremos acercarte productos sanos, frescos y locales</p>
+                    <p class="text-light" id="text">Queremos acercarte productos sanos, frescos y locales</p>
                     <br>
                     <br>
                     <br>
@@ -82,12 +96,12 @@
             </article>
             <article class="container-fluid" id="naranja">
                 <div class="container-sm">
-                    <p><a>desde 2020</a>
-Nos encontramos organizaciones sociales,
-cooperativas productivas, trabajadores
-y trabajadoras del agro, todos bajo la consigna
-de proveer alimentos sanos.</p>
-                    
+                    <hr style=" widht: 30px; height: 5px; background-color: #B7451C;" >
+                    <a id="etiqueta">desde el 2020</a>
+                   
+                <p class="texto text-light">Nos encontramos organizaciones <br>sociales, cooperativas productivas,<br> trabajadores y trabajadoras del agro, todos bajo la consigna de proveer alimentos sanos.</p>
+                <hr style=" widht: 30px; height: 5px; background-color: #B7451C;" >
+                
                 </div>
             </article>
    
