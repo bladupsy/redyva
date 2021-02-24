@@ -11,7 +11,7 @@
     <title>RedyVa</title>
     
     <style>
-     #light {
+     #fondo-presentacion {
         margin: 0; 
         background-image: url("{{ asset('img/perejil.png') }}");
         background-size: cover;
@@ -20,6 +20,7 @@
         min-height: 800px;
         font-size: 18px;
         font-style: normal;
+        color: #f86a0c !important;
         
              
       }
@@ -48,7 +49,7 @@
               </ul>
       </div>
 
-  <article class="container-fluid" id="light">
+  <article class="container-fluid" id="fondo-presentacion">
   
   <div class="row justify-content-md-center">
         <div class="col col-lg-2">
@@ -56,11 +57,11 @@
         </div>
         <div class="col-md-auto">
               <p><strong>Proyecto final de cursada</strong><br>Desarrollador web <br>Fullstack: de 0 a 100</p>
-               <p> Profesor <br>Lucas Saclier</p><br><br>
-            <a class="btn btn-orange  btn-lg  rounded-pill text-light" href="#">proyecto</a>
+               <p> Profesor <br>Lucas Saclier</p>
         </div>
         <div class="col-md-auto">
-          <p><strong>Intro | Red de distribución </strong><br>de  productos agropecuarios<br>de la zona. Desarrollar una<br>plataforma que de facilidades<br>para que el/la usuario/a pueda<br>realizar un pedido y coordinar<br>como retirarlo.</p>
+          <p><strong>Intro | Red de distribución </strong><br>de  productos agropecuarios<br>de la zona. Desarrollar una<br>plataforma que de facilidades<br>para que el/la usuario/a pueda<br>realizar un pedido y coordinar<br>como retirarlo.</p><br>
+          <a class="btn btn-light text-orange btn-lg  rounded-pill " href="#">proyecto</a>
         </div>
         <div class="col-lg-2">
           <p><strong>Integrantes</strong><br>Darío Javier Piñeyro <br>Gisela A. Cristaldo<br>Lucas Daniel Corbalán<br>Juan Nahuel Beck</p>
