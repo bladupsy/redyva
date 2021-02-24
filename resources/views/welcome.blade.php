@@ -57,7 +57,7 @@
         <div class="col-md-auto">
               <p><strong>Proyecto final de cursada</strong><br>Desarrollador web <br>Fullstack: de 0 a 100</p>
                <p> Profesor <br>Lucas Saclier</p><br><br>
-            <button type="button" class="btn btn-success btn-lg  rounded-pill">Warning</button>
+            <a class="btn btn-orange  btn-lg  rounded-pill text-light" href="#">proyecto</a>
         </div>
         <div class="col-md-auto">
           <p><strong>Intro | Red de distribución </strong><br>de  productos agropecuarios<br>de la zona. Desarrollar una<br>plataforma que de facilidades<br>para que el/la usuario/a pueda<br>realizar un pedido y coordinar<br>como retirarlo.</p>

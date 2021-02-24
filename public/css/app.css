@@ -2496,10 +2496,15 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
 }
 
+.btn-orange {
+  color: #fff;
+  background-color: #D03E0D !important;
+  border-color: #D03E0D;
+}
 .btn-success {
   color: #fff;
-  background-color: #38c172;
-  border-color: #38c172;
+  background-color: #378c12;
+  border-color: #378c12;
 }
 .btn-success:hover {
   color: #fff;
