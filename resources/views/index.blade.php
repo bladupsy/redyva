@@ -36,7 +36,7 @@
               background-color: #E94E1A;
               background-size: cover;
               padding-top: 150px;
-              min-height: 700px;
+              min-height: 750px;
           }
           .texto {
             position: absolute;
@@ -60,10 +60,10 @@
 
           }
           #map { 
-            
+            background-color: #fff !important;
             height: 650px;
-            box-shadow: 5px 5px 5px #888;
             width: 100%;
+            opacity: 0.7;
          }
         .map {
                 background-image: white;
@@ -126,11 +126,11 @@
             </article>
             <article class="container-fluid" id="naranja">
                 <div class="container-sm">
-                    <hr style=" width: 20%; height: 10px; background-color: #B7451C; text-align:left;margin-left:0; border-radius: 5px 5px 5px 5px;" >
+                    <hr style=" width: 15%; height: 10px; background-color: #B7451C; text-align:left;margin-left:0; border-radius: 5px 5px 5px 5px;" >
                     <a id="etiqueta">desde el 2020</a>
                    
                 <p class="texto text-light">Nos encontramos organizaciones <br>sociales, cooperativas productivas,<br> trabajadores y trabajadoras del agro, todos bajo la consigna de proveer alimentos sanos.</p><br><br><br><br><br><br><br><br><br><br><br><br>
-                <hr style=" width: 20%; height: 10px; background-color: #B7451C; text-align:left;margin-left:0; border-radius: 5px 5px 5px 5px;" >
+                <hr style=" width: 15%; height: 10px; background-color: #B7451C; text-align:left;margin-left:0; border-radius: 5px 5px 5px 5px;" >
                 <a id="etiqueta">conoce más</a>
                 </div>
             </article>
@@ -175,6 +175,27 @@
             </article>
             <article class="container-fluid" id="footer">
                 <div class="container-sm">
+                    <hr>
+                    <div class="row align-items-center">
+                        <div class="col"><img src="{{ asset('img/iconos/A-T.png') }}"></div>
+                        <div class="col"><img src="{{ asset('img/iconos/Sindicato-Trabajadores-Pasivos.png') }}"></div>
+                        <div class="col"><img src="{{ asset('img/iconos/Frente-Patria.png') }}"></div>
+                        <div class="col"><img src="{{ asset('img/iconos/Tupac-Amaru.png') }}"></div>
+                        <div class="col"><img src="{{ asset('img/iconos/Artefimera.png') }}"></div>
+                        <div class="col"><img src="{{ asset('img/iconos/ATE.png') }}"></div>
+                        <div class="col"><img src="{{ asset('img/iconos/Coop-Mbarete.png') }}"></div>
+                        <div class="col"><img src="{{ asset('img/iconos/Nuestras-Raices.png') }}"></div>
+                        <div class="col"><img src="{{ asset('img/iconos/Las-Tunas.png') }}"></div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col"><img src="{{ asset('img/iconos/Gob.png') }}"></div>
+                        <div class="col"><img src="{{ asset('img/iconos/Coop.png') }}"></div>
+                        <div class="col"><img src="{{ asset('img/iconos/Municipalidad.png') }}"></div>
+                        <div class="col"><img src="{{ asset('img/iconos/SENASA.png') }}"></div>
+                        <div class="col"><img src="{{ asset('img/iconos/INTA.png') }}"></div>
+                        <div class="col"><img src="{{ asset('img/iconos/Gob-Nac.png') }}"></div>
+                        <div class="col"><img src="{{ asset('img/iconos/scra.png') }}"></div>
+                    </div>
                     <hr>
 
                 </div>
