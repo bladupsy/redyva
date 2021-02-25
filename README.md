@@ -70,7 +70,8 @@ Para instalar laravel:
  - composer global require laravel/installer
 
 Para clonar en .env
- -cp .env.example .env
+ <pre><code>`cp .env.example .env`</code></pre>
+
 
 Sin datos comprobables o entendibles:
 <pre><code> `php artisan key:generate ` </code></pre>
