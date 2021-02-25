@@ -92,3 +92,7 @@ Para poder usarlos debemos escribir en el head de nuestra plantilla lo siguiente
 Y justo antes de finalizar el body lo siguiente:
 
 <script src="{{asset('js/app.js')}}"></script>
+
+## Instale Leaflet
+ Através de npm con el siguiente comando
+ <pre><code>npm install leaflet</code><pre>
