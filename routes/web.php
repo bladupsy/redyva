@@ -16,3 +16,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/quienes', function () {
+    return view('quienes');
+});
+Route::get('/hacen', function () {
+    return view('hacen');
+});
+Route::get('/puntos', function () {
+    return view('puntos');
+});
+/*
+Route::get('lista', function(){
+    return view('lista');
+})->name('lista');
+
+
+Route::get('lista/{nombre?}', function ($nombre=null) {
+    $productos=['pescado', 'citrus', 'verde' ];
+    return view('lista', array('productos'=>$producto, 'nombre' => $nombre));
+}) ->name('lista');*/

@@ -120,7 +120,7 @@
                     <br>
                     <br>
                     <br>
-                    <button class="btn btn-orange text-light rounded-pill parte1" href="button">encargá tú bolsón</button>
+                    <a class="btn btn-orange text-light rounded-pill parte1" href="pedido">encargá tú bolsón</a>
                     
                 </div>
             </article>
@@ -131,7 +131,7 @@
                    
                 <p class="texto text-light">Nos encontramos organizaciones <br>sociales, cooperativas productivas,<br> trabajadores y trabajadoras del agro, todos bajo la consigna de proveer alimentos sanos.</p><br><br><br><br><br><br><br><br><br><br><br><br>
                 <hr style=" width: 15%; height: 10px; background-color: #B7451C; text-align:left;margin-left:0; border-radius: 5px 5px 5px 5px;" >
-                <a id="etiqueta">conoce más</a>
+                <a id="etiqueta" href="hacen">conoce más</a>
                 </div>
             </article>
             <article  class="container-fluid" id="video">
@@ -161,7 +161,7 @@
                                      setView([-27.3812,-55.9196],  15); //[38.6202, -0.5731] es la latitud y longitud de la zona que queremos mostrar, en nuestro caso Ibi 
                                      L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                                      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>',
-                                     maxZoom: 13
+                                     maxZoom: 14
                                     }).addTo(mapsipe);
 
                             for (var i = 0; i < markers.length; i++) {
