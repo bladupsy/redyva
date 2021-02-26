@@ -22,7 +22,14 @@
                 
             }
             .parte1 {
-                font-size: 18px;
+                
+                
+font-family:'Montserrat', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: -0.01em;
             }
             #text {
                 font-family: 'Montserrat', sans-serif;
@@ -30,7 +37,7 @@
                 width: 743px;
                 font-size: 73px;
                 text-align: left;
-                font-weight: bold;
+                
                 line-height: 77px;
                 letter-spacing: -0.045em;
 
@@ -40,6 +47,12 @@
               background-size: cover;
               padding-top: 150px;
               min-height: 750px;
+              font-family: 'Montserrat', sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 35px;
+                line-height: 43px;
+                letter-spacing: -0.01em;
           }
           .texto {
             position: absolute;
@@ -93,7 +106,16 @@
 
           }
 
-     
+          .parte2 {
+            font-family:  'Montserrat', sans-serif;
+font-style: normal;
+
+font-size: 26px;
+line-height: 27px;
+
+/* or 27px */
+letter-spacing: -0.05em;
+          }
         </style>
     </head>
 
@@ -122,7 +144,7 @@
                     <a class="btn btn-light text-orange rounded-pill parte1">Somos una red que<strong> produce, distribuye y comercializa</strong> con sentido político</a>
                     <br>
                     <br>
-                    <p class="text-light" id="text">Queremos acercarte productos sanos, frescos y locales</p>
+                    <p class="text-light" id="text"><strong>Queremos acercarte productos sanos, frescos y locales</strong></p>
                     <br>
                     <br>
                     <br>
@@ -137,7 +159,7 @@
                     <br>
                     
                     <div class="container">
-                    <a class="btn btn-orange text-light rounded-pill parte1" href="producto"  data-toggle="modal" data-target="#myModal">encargá tú bolsón</a>
+                    <a class="btn btn-orange text-light rounded-pill parte2" href="producto"  data-toggle="modal" data-target="#myModal">encargá tú bolsón</a>
                     <!-- Modal -->
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
@@ -166,7 +188,7 @@
                     <hr style=" width: 15%; height: 10px; background-color: #B7451C; text-align:left;margin-left:0; border-radius: 5px 5px 5px 5px;" >
                     <a id="etiqueta">desde el 2020</a>
                    
-                <p class="texto text-light">Nos encontramos organizaciones <br>sociales, cooperativas productivas,<br> trabajadores y trabajadoras del agro, todos bajo la consigna de proveer alimentos sanos.</p><br><br><br><br><br><br><br><br><br><br><br><br>
+                <p class="texto text-light">Nos encontramos organizaciones <br>sociales, cooperativas productivas,<br> trabajadores y trabajadoras del agro, todos bajo la consigna de proveer alimentos sanos.</p><br><br><br><br><br><br><br>
                 <hr style=" width: 15%; height: 10px; background-color: #B7451C; text-align:left;margin-left:0; border-radius: 5px 5px 5px 5px;" >
                 <a id="etiqueta" href="hacen">conoce más</a>
                 </div>
