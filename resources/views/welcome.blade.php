@@ -61,7 +61,7 @@
         </div>
         <div class="col-md-auto">
           <p><strong>Intro | Red de distribución </strong><br>de  productos agropecuarios<br>de la zona. Desarrollar una<br>plataforma que de facilidades<br>para que el/la usuario/a pueda<br>realizar un pedido y coordinar<br>como retirarlo.</p><br>
-          <a class="btn btn-light text-orange btn-lg  rounded-pill " href="#">proyecto</a>
+          <a class="btn btn-light text-orange btn-lg  rounded-pill " href="index">proyecto</a>
         </div>
         <div class="col-lg-2">
           <p><strong>Integrantes</strong><br>Darío Javier Piñeyro <br>Gisela A. Cristaldo<br>Lucas Daniel Corbalán<br>Juan Nahuel Beck</p>

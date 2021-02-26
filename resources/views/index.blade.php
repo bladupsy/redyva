@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="{{asset('css/app.css')}}" type="text/css"> 
         <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"/>
+    <title>Redyva</title>
         <style>
             body {
                 font-family: 'Montserrat', sans-serif;
@@ -134,8 +135,30 @@
                     <br>
                     <br>
                     <br>
-                    <a class="btn btn-orange text-light rounded-pill parte1" href="producto" >encargá tú bolsón</a>
                     
+                    <div class="container">
+                    <a class="btn btn-orange text-light rounded-pill parte1" href="producto"  data-toggle="modal" data-target="#myModal">encargá tú bolsón</a>
+                    <!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+        </div>
                 </div>
             </article>
             <article class="container-fluid" id="naranja">
