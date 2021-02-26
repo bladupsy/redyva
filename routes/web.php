@@ -25,6 +25,12 @@ Route::get('/hacen', function () {
 Route::get('/puntos', function () {
     return view('puntos');
 });
+Route::get('/producto', function () {
+    return view('producto');
+});
+Route::get('/index', function () {
+    return view('index');
+});
 /*
 Route::get('lista', function(){
     return view('lista');

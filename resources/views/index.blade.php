@@ -9,6 +9,8 @@
         <style>
             body {
                 font-family: 'Montserrat', sans-serif;
+                
+
             }
 
             #fondo-inicio {
@@ -78,6 +80,17 @@
               padding-top: 150px;
               min-height: 700px;
         }
+        .nav {
+            height: 90px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            padding-top: 30px;
+            font-weight: 600;
+            line-height: 18px;
+            letter-spacing: 0em;
+                
+
+          }
 
      
         </style>
@@ -88,14 +101,15 @@
 
             <nav class="navbar navbar-light ">
                 <div class="container-sm">
-                    <a class="navbar-brand" href="icono">
+                    <a class="navbar-brand" href="index">
                     <img src="{{ asset('img/redyva.png') }}" width="53" height="53" >
                     </a>
                     <ul class="nav justify-content-end">
-                        <a class="nav-link text-orange" href="quienes">Quienes somos</a>
-                      <a class="nav-link text-orange" href="hacen">Qué hacemos</a>
-                        <a class="nav-link text-orange" href="bolson"> Conseguí tú bolsón</a>
-                      <a class="nav-link text-orange" href="puntos">Puntos de distribución</a>
+                    <a class="nav-link text-orange" href="quienes">Quienes <br>somos</a>
+                        <a class="nav-link text-orange" href="hacen">Qué <br>hacemos</a>
+                        <a class="nav-link text-orange" href="producto"> Conseguí <br>tú bolsón</a>
+                      <a class="nav-link text-orange" href="puntos">Puntos de<br> distribución</a>
+        
         
                     </ul>
                 </div>
@@ -120,7 +134,7 @@
                     <br>
                     <br>
                     <br>
-                    <a class="btn btn-orange text-light rounded-pill parte1" href="pedido">encargá tú bolsón</a>
+                    <a class="btn btn-orange text-light rounded-pill parte1" href="producto" >encargá tú bolsón</a>
                     
                 </div>
             </article>
@@ -140,7 +154,7 @@
             <article class="container-sm map">
             <div class="container-sm row justify-content-between">
                 <div class="col-4"><br><br><br>
-                <button type="button"class="btn btn-outline-orange rounded-pill">&nbsp;&nbsp;Áca podés encontrar los <br> puntos de distribución&nbsp;&nbsp;</button>
+                <a type="button"class="btn btn-outline-orange rounded-pill" href="puntos">&nbsp;&nbsp;Áca podés encontrar los <br> puntos de distribución&nbsp;&nbsp;</a>
                 <br><p class="text-orange"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>Posadas</strong></p>
             </div>
             <div class="col-4"><img src="{{ asset('img/pizzarra.png') }}"width="156px" height="156px"></div>
@@ -161,7 +175,7 @@
                                      setView([-27.3812,-55.9196],  15); //[38.6202, -0.5731] es la latitud y longitud de la zona que queremos mostrar, en nuestro caso Ibi 
                                      L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                                      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>',
-                                     maxZoom: 14
+                                     maxZoom: 15
                                     }).addTo(mapsipe);
 
                             for (var i = 0; i < markers.length; i++) {
