@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="{{asset('css/app.css')}}" type="text/css"> 
         <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
     <title>Redyva</title>
         <style>
             body {
@@ -116,6 +118,26 @@ line-height: 27px;
 /* or 27px */
 letter-spacing: -0.05em;
           }
+          #myModal {
+            font-family:'Montserrat', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 26px;
+line-height: 32px;
+
+/* identical to box height */
+letter-spacing: -0.03em;
+          }
+          #hello {
+            font-family: 'Montserrat', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 26px;
+line-height: 32px;
+
+/* identical to box height */
+letter-spacing: -0.01em;
+          }
         </style>
     </head>
 
@@ -167,11 +189,15 @@ letter-spacing: -0.05em;
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
+        <h4 class="modal-title">seleccioná tu bolsón</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
         </div>
         <div class="modal-body">
-          <p>Some text in the modal.</p>
+          
+          <p><br><br><br>&nbsp;&nbsp; <a href="#"  id="hello" role="button" class="btn btn-outline-orange rounded-pill"><b>pescado<b></a> 
+          &nbsp;&nbsp;&nbsp;<a href="#" id="hello" role="button" class="btn btn-outline-orange rounded-pill" ><b>citrus<b></a> 
+          &nbsp;&nbsp;&nbsp;<a href="#" id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill" ><b>verde<b></a> 
+          <br><br><br></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
