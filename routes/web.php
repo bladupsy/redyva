@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function(){
+    return view('princ');
 });
+
+// hay que poner dos comandos despues de crear
+// 1) composer install
+// 2) cp .env.example .env
+// 3) php artisan key:generate
