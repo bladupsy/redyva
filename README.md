@@ -77,11 +77,11 @@ Recurso obtenido en [Codersfree](https://codersfree.com/blog/como-instalar-boots
 Para poder instalar todas las dependencias que necesitamos, debemos instalar npm en nuestro proyecto (para instalar npm debemos tener instalado Node Js en nuestra computadora):
 Instalación npm
 
-  npm install
+ <pre><code> npm install </code></pre>
 
 Compilar nuestros archivos
 
-  npm run dev
+  <pre><code>npm run dev</code></pre>
 
 Listo, ya tenemos nuestros archivos js y css listo para utilizar.
 
