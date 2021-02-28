@@ -64,10 +64,10 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## Como Levantar proyecto
  Para agregar las dependencias de composer
 
-  - Composer install
+  <pre><code> Composer install</code></pre>
 
 Para instalar laravel:
- - composer global require laravel/installer
+<pre><code> composer global require laravel/installer </code></pre>
 
 Para clonar en .env
  <pre><code>`cp .env.example .env`</code></pre>
@@ -78,6 +78,3 @@ Sin datos comprobables o entendibles:
 
 
 
-Ejemplo:
-
-<pre><code>`tu linea de codigo`</code></pre>
