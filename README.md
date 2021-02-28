@@ -70,9 +70,14 @@ Después de instalar el paquete anterior, estamos listos para instalar Boostrap 
 
 Instalación Boostrap 4:
 
-php artisan ui bootstrap
+<pre><code>php artisan ui bootstrap</code></pre>
 
 Recurso obtenido en [Codersfree](https://codersfree.com/blog/como-instalar-bootstrap-4-en-tu-proyecto-laravel-7).
+
+Sino en cambio lo podemos instalar a traves de Composer
+
+<pre><code>composer require twbs/bootstrap:5.0.0-beta2 </code></pre>
+
 
 Para poder instalar todas las dependencias que necesitamos, debemos instalar npm en nuestro proyecto (para instalar npm debemos tener instalado Node Js en nuestra computadora):
 Instalación npm
