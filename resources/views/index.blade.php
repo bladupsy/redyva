@@ -194,8 +194,8 @@ letter-spacing: -0.01em;
         </div>
         <div class="modal-body">
           
-          <p><br><br><br>&nbsp;&nbsp; <a href="#"  id="hello" role="button" class="btn btn-outline-orange rounded-pill"><b>pescado<b></a> 
-          &nbsp;&nbsp;&nbsp;<a href="#" id="hello" role="button" class="btn btn-outline-orange rounded-pill" ><b>citrus<b></a> 
+          <p><br><br><br>&nbsp;&nbsp; <a href="#"  id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill"><b>pesado<b></a> 
+          &nbsp;&nbsp;&nbsp;<a href="#" id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill" ><b>citrus<b></a> 
           &nbsp;&nbsp;&nbsp;<a href="#" id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill" ><b>verde<b></a> 
           <br><br><br></p>
         </div>
