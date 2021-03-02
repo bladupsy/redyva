@@ -16,21 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/quienes', function () {
-    return view('quienes');
-});
-Route::get('/hacen', function () {
-    return view('hacen');
-});
-Route::get('/puntos', function () {
-    return view('puntos');
-});
-Route::get('/producto', function () {
-    return view('producto');
-});
-Route::get('/index', function () {
-    return view('index');
-});
+Route::get('/quienes', [App\Http\Controllers\NavegacionController::class, 'quienes']);
+Route::get('/hacen', [App\Http\Controllers\NavegacionController::class, 'hacen']);
+Route::get('/puntos', [App\Http\Controllers\NavegacionController::class, 'puntos']);
+Route::get('/producto', [App\Http\Controllers\NavegacionController::class, 'producto']);
+Route::get('/index', [App\Http\Controllers\NavegacionController::class, 'index']);
 /*
 Route::get('lista', function(){
     return view('lista');
