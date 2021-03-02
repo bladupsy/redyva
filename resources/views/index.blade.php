@@ -152,7 +152,7 @@ letter-spacing: -0.01em;
                     <ul class="nav justify-content-end">
                     <a class="nav-link text-orange" href="quienes">Quienes <br>somos</a>
                         <a class="nav-link text-orange" href="hacen">Qué <br>hacemos</a>
-                        <a class="nav-link text-orange" href="producto"> Conseguí <br>tú bolsón</a>
+                        <a class="nav-link text-orange btn"  data-toggle="modal" data-target="#myModal" ><?php @include('producto') ?> Conseguí <br>tú bolsón</a>
                       <a class="nav-link text-orange" href="puntos">Puntos de<br> distribución</a>
         
         
@@ -182,31 +182,8 @@ letter-spacing: -0.01em;
                     
                     <div class="container">
                     <a class="btn btn-orange text-light rounded-pill parte2" href="producto"  data-toggle="modal" data-target="#myModal">encargá tú bolsón</a>
-                    <!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-        <h4 class="modal-title">seleccioná tu bolsón</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-          
-          <p><br><br><br>&nbsp;&nbsp; <a href="#"  id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill"><b>pesado<b></a> 
-          &nbsp;&nbsp;&nbsp;<a href="#" id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill" ><b>citrus<b></a> 
-          &nbsp;&nbsp;&nbsp;<a href="#" id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill" ><b>verde<b></a> 
-          <br><br><br></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-        </div>
+                    <?php @include('producto') ?>
+                    </div>
                 </div>
             </article>
             <article class="container-fluid" id="naranja">
