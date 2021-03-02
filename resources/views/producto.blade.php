@@ -22,14 +22,13 @@
         </div>
         <div class="modal-body">
           
-          <p><br>&nbsp;&nbsp; <a href="#"  id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill"><b>pesado<b></a> 
-          &nbsp;&nbsp;&nbsp;<a href="#" id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill" ><b>citrus<b></a> 
-          &nbsp;&nbsp;&nbsp;<a href="#" id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill" ><b>verde<b></a> 
+          <p><br>&nbsp;&nbsp; <a href="pesado"  id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill"><b>pesado<b></a> 
+          &nbsp;&nbsp;&nbsp;<a href="citrus" id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill" ><b>citrus<b></a> 
+          &nbsp;&nbsp;&nbsp;<a href="verde" id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill" ><b>verde<b></a> 
           <br></p>
         </div>
         <div class="modal-footer">
-          <p id="hello" >Se entregan los viernes</p>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          
         </div>
       </div>
       

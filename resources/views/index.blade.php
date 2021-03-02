@@ -7,7 +7,7 @@
         <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-
+  
     <title>Redyva</title>
         <style>
             body {
@@ -125,6 +125,9 @@ font-weight: normal;
 font-size: 26px;
 line-height: 32px;
 
+  
+
+
 /* identical to box height */
 letter-spacing: -0.03em;
           }
@@ -152,7 +155,7 @@ letter-spacing: -0.01em;
                     <ul class="nav justify-content-end">
                     <a class="nav-link text-orange" href="quienes">Quienes <br>somos</a>
                         <a class="nav-link text-orange" href="hacen">Qué <br>hacemos</a>
-                        <a class="nav-link text-orange btn"  data-toggle="modal" data-target="#myModal" ><?php @include('producto') ?> Conseguí <br>tú bolsón</a>
+                        <a class="nav-link text-orange"> Conseguí <br>tú bolsón</a>
                       <a class="nav-link text-orange" href="puntos">Puntos de<br> distribución</a>
         
         
@@ -182,7 +185,29 @@ letter-spacing: -0.01em;
                     
                     <div class="container">
                     <a class="btn btn-orange text-light rounded-pill parte2" href="producto"  data-toggle="modal" data-target="#myModal">encargá tú bolsón</a>
-                    <?php @include('producto') ?>
+                    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+        <h4 class="modal-title">seleccioná tu bolsón</h4>
+          <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+        </div>
+        <div class="modal-body">
+          
+          <p><br><br>&nbsp;&nbsp; <a href="pesado"  id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill"><b>pesado<b></a> 
+          &nbsp;&nbsp;&nbsp;<a href="citrus" id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill" ><b>citrus<b></a> 
+          &nbsp;&nbsp;&nbsp;<a href="verde" id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill" ><b>verde<b></a> 
+          <br><br></p>
+        </div>
+        <div class="modal-footer">
+          <h4 class="">Se entregan: <h4>
+        </div>
+      </div>
+      
+    </div>
+  </div>
                     </div>
                 </div>
             </article>

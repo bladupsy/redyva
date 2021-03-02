@@ -17,6 +17,7 @@
                 background-size: cover;
                 padding-top: 200px;
                 min-height: 850px;
+                
 
           }
           .nav {

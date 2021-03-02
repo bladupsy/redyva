@@ -31,6 +31,16 @@ Route::get('/producto', function () {
 Route::get('/index', function () {
     return view('index');
 });
+Route::get('/pesado', function () {
+    return view('pesado');
+});
+
+Route::get('/citrus', function () {
+    return view('citrus');
+});
+Route::get('/verde', function () {
+    return view('verde');
+});
 /*
 Route::get('lista', function(){
     return view('lista');
