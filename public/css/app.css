@@ -14432,7 +14432,15 @@ input[type=button].btn-block {
 
 .card-subtitle {
   margin-top: -0.375rem;
-  margin-bottom: 0;
+  margin-bottom: 0.75rem;
+  font-family:  'Montserrat', sans-serif;
+
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+
+/* identical to box height */
+letter-spacing: -0.01em;
 }
 
 .card-text:last-child {
