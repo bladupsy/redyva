@@ -14,6 +14,14 @@
                 min-height: 450px;
                 
             }
+            #subtitle {
+              font-family:  'Montserrat', sans-serif;
+              font-size: 20px;
+line-height: 25dpx;
+
+/* or 141% */
+letter-spacing: -0.03em;
+            }
             </style>
         </head>
         <body>
@@ -22,16 +30,19 @@
             <div class="col"></div>
             <div class="col">
             
-            <div class="card" >
+            <div class="card" style="width:  30rem;" >
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <h5 class="card-title">selecciona tú bolsón  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <b> para el:</b> viernes </h5>
+    <hr>
+    <h6 class="card-subtitle mb-2 text-dark"><b>citrus</b></h6>
+    <a>pedir</a>
+    <hr>
     <p class="card-text">
-      Some quick example text to build on the card title and make up the bulk of the
-      card's content.
+      <p>Éste es el contenido</p>
+      <p id="subtitle">Mandarina  &nbsp;&nbsp;&nbsp;12 unidades<br>Limón  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 unidades<br>Pomelo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6 unidades<br>
+          </p>
     </p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+   
   </div>
 </div>
 </div>

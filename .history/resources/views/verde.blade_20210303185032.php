@@ -8,13 +8,12 @@
         <head>
             <style>
                     #fondo-inicio {
-                background-image: url("{{ asset('img/tomate.png') }}");
+                background-image: url("{{ asset('img/verde.png') }}");
                 background-size: cover;
                 padding-top: 200px;
-                min-height: 250px;
-                
-            }
-            #subtitle {
+                min-height: 450px;
+                 }
+                #subtitle {
               font-family:  'Montserrat', sans-serif;
               font-size: 20px;
 line-height: 25dpx;
@@ -29,19 +28,19 @@ letter-spacing: -0.03em;
         <body>
         <div class="container-fluid " id="fondo-inicio"><div>
             <div class="row align-items-center">
-            <div class="col"></div>
+            <div class="col"><span class="glyphicon glyphicon-chevron-left" type="button"></span></div>
             <div class="col">
             
             <div class="card" style="width:  30rem;" >
   <div class="card-body">
     <h5 class="card-title">selecciona tú bolsón  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <b> para el:</b> viernes </h5>
     <hr>
-    <h6 class="card-subtitle mb-2 text-dark"><b>pesado</b></h6>
+    <h6 class="card-subtitle mb-2 text-dark"><b>verde</b></h6>
     <a>pedir</a>
     <hr>
     <p class="card-text">
       <p>Éste es el contenido</p>
-      <p id="subtitle">Zapallito &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1kg aprox.<br>Zanahoria  &nbsp;&nbsp;&nbsp; 2kg aprox.<br>Papa  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1kg aprox.<br>Mandioca&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3kg aprox.<br>Berenjenas &nbsp;&nbsp;&nbsp;500gr. aprox.<br>
+      <p id="subtitle">Lechuga   &nbsp;&nbsp;&nbsp;1kg aprox.<br>Rabanito   &nbsp;&nbsp;&nbsp; 2kg aprox.<br>Cebollita   &nbsp;&nbsp;&nbsp; 1kg aprox.<br>Palta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1kg aprox.<br>Acelga&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1kg aprox.<br>Perejil&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;500 gr aprox. <br>
           </p>
     </p>
    
