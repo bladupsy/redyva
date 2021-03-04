@@ -17,7 +17,7 @@
 
         }
 
-        #fondo-inicio {
+        .fondo-inicio {
             background-image: url("{{ asset('img/cilantro.png') }}");
             background-size: cover;
             padding-top: 200px;
@@ -36,7 +36,7 @@
             letter-spacing: -0.01em;
         }
 
-        #text {
+        .text {
             font-family: 'Montserrat', sans-serif;
             position: absolute;
             width: 743px;
@@ -70,11 +70,16 @@
             line-height: 46px;
         }
 
-        #etiqueta {
+        .etiqueta {
             font-size: 30px;
             color: white;
             font-weight: italic;
+            
 
+        }
+
+        .conoce {
+            margin-top: 245px;
         }
 
         #video {
@@ -115,17 +120,12 @@
             font-weight: 600;
             line-height: 18px;
             letter-spacing: 0em;
-
-
         }
-
         .parte2 {
             font-family: 'Montserrat', sans-serif;
             font-style: normal;
-
             font-size: 26px;
             line-height: 27px;
-
             /* or 27px */
             letter-spacing: -0.05em;
         }
@@ -136,15 +136,14 @@
             font-weight: normal;
             font-size: 26px;
             line-height: 32px;
-
-
-
-
             /* identical to box height */
             letter-spacing: -0.03em;
         }
 
-        #hello {
+        .hello {
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
             font-family: 'Montserrat', sans-serif;
             font-style: normal;
             font-weight: normal;
@@ -153,6 +152,10 @@
 
             /* identical to box height */
             letter-spacing: -0.01em;
+        }
+
+        .compra {
+            margin-top: 280px;
         }
     </style>
 </head>
@@ -177,26 +180,15 @@
 
 
     </nav>
-    <article class="container-fluid" id="fondo-inicio">
+    <article class="container-fluid fondo-inicio">
         <div class="container-sm">
             <a class="btn btn-light text-orange rounded-pill parte1">Somos una red que<strong> produce, distribuye y comercializa</strong> con sentido político</a>
             <br>
             <br>
-            <p class="text-light" id="text"><strong>Queremos acercarte productos sanos, frescos y locales</strong></p>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            <p class="text-light text"><strong>Queremos acercarte productos sanos, frescos y locales</strong></p>
 
-            <div class="container">
+
+            <div class="container compra">
                 <a class="btn btn-orange text-light rounded-pill parte2" href="producto" data-toggle="modal" data-target="#myModal">encargá tú bolsón</a>
                 <div class="modal fade" id="myModal" role="dialog">
                     <div class="modal-dialog">
@@ -209,10 +201,10 @@
                             </div>
                             <div class="modal-body">
 
-                                <p><br><br>&nbsp;&nbsp; <a href="pesado" id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill"><b>pesado<b></a>
-                                    &nbsp;&nbsp;&nbsp;<a href="citrus" id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill"><b>citrus<b></a>
-                                    &nbsp;&nbsp;&nbsp;<a href="verde" id="hello" role="button" class="btn btn-outline-orange text-dark rounded-pill"><b>verde<b></a>
-                                    <br><br>
+                                <p><a href="pesado" role="button" class="btn btn-outline-orange text-dark rounded-pill hello"><b>pesado<b></a>
+                                    <a href="citrus" role="button" class="btn btn-outline-orange text-dark rounded-pill hello"><b>citrus<b></a>
+                                    <a href="verde" role="button" class="btn btn-outline-orange text-dark rounded-pill hello"><b>verde<b></a>
+
                                 </p>
                             </div>
                             <div class="modal-footer">
@@ -228,11 +220,14 @@
     <article class="container-fluid" id="naranja">
         <div class="container-sm">
             <hr style=" width: 15%; height: 10px; background-color: #B7451C; text-align:left;margin-left:0; border-radius: 5px 5px 5px 5px;">
-            <a id="etiqueta">desde el 2020</a>
+            <a class="etiqueta">desde el 2020</a>
 
-            <p class="texto text-light">Nos encontramos organizaciones <br>sociales, cooperativas productivas,<br> trabajadores y trabajadoras del agro, todos bajo la consigna de proveer alimentos sanos.</p><br><br><br><br><br><br><br>
-            <hr style=" width: 15%; height: 10px; background-color: #B7451C; text-align:left;margin-left:0; border-radius: 5px 5px 5px 5px;">
-            <a id="etiqueta" href="hacen">conoce más</a>
+            <p class="texto text-light">Nos encontramos organizaciones <br>sociales, cooperativas productivas,<br> trabajadores y trabajadoras del agro, todos bajo la consigna de proveer alimentos sanos.</p>
+            <div class="conoce">
+                <hr style=" width: 15%; height: 10px; background-color: #B7451C; text-align:left;margin-left:0; border-radius: 5px 5px 5px 5px;">
+                <a class="etiqueta" href="hacen">conoce más</a>
+            </div>
+                
         </div>
     </article>
     <article class="container-fluid" id="video">
