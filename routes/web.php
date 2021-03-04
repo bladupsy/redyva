@@ -13,9 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*Rutas en las cuales se manejan las redireciones entre paginas */
+
 Route::get('/', function () {
     return view('welcome');
 });
+//Rutas del nav
 Route::get('/quienes', function () {
     return view('quienes');
 });
@@ -31,6 +34,8 @@ Route::get('/producto', function () {
 Route::get('/index', function () {
     return view('index');
 });
+
+//Rutas del Modal
 Route::get('/pesado', function () {
     return view('pesado');
 });
@@ -41,13 +46,17 @@ Route::get('/citrus', function () {
 Route::get('/verde', function () {
     return view('verde');
 });
-/*
-Route::get('lista', function(){
-    return view('lista');
-})->name('lista');
-
-
-Route::get('lista/{nombre?}', function ($nombre=null) {
-    $productos=['pescado', 'citrus', 'verde' ];
-    return view('lista', array('productos'=>$producto, 'nombre' => $nombre));
-}) ->name('lista');*/
+//Rutas para el formulario de los diferentes bolsones
+Route::get('/pedir-pesado', function () {
+    return view('pedir-pesado');
+});
+Route::get('/pedir-citrus', function () {
+    return view('pedir-citrus');
+});
+Route::get('/pedir-verde', function () {
+    return view('pedir-verde');
+});
+//Ruta de Administrador
+Route::get('/admin', function () {
+    return view('admin');
+});

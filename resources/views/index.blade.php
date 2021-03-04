@@ -48,7 +48,7 @@
 
         }
 
-        #naranja {
+        .naranja {
             background-color: #E94E1A;
             background-size: cover;
             padding-top: 150px;
@@ -74,7 +74,7 @@
             font-size: 30px;
             color: white;
             font-weight: italic;
-            
+
 
         }
 
@@ -82,7 +82,7 @@
             margin-top: 245px;
         }
 
-        #video {
+        .video {
             background-image: url("{{ asset('img/personas.png') }}");
             background-size: cover;
             padding-top: 200px;
@@ -105,7 +105,7 @@
 
         }
 
-        #footer {
+        .footer {
             background-color: #fff;
             background-size: cover;
             padding-top: 150px;
@@ -121,6 +121,7 @@
             line-height: 18px;
             letter-spacing: 0em;
         }
+
         .parte2 {
             font-family: 'Montserrat', sans-serif;
             font-style: normal;
@@ -156,6 +157,23 @@
 
         .compra {
             margin-top: 280px;
+        }
+
+        .line {
+            width: 15%;
+            height: 10px;
+            background-color: #B7451C;
+            text-align: left;
+            margin-left: 0;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        .line-icon {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            padding: 0.75rem;
+            border-top: 1px dashed #000 !important;
         }
     </style>
 </head>
@@ -217,20 +235,20 @@
             </div>
         </div>
     </article>
-    <article class="container-fluid" id="naranja">
+    <article class="container-fluid naranja">
         <div class="container-sm">
-            <hr style=" width: 15%; height: 10px; background-color: #B7451C; text-align:left;margin-left:0; border-radius: 5px 5px 5px 5px;">
+            <hr class="line">
             <a class="etiqueta">desde el 2020</a>
 
             <p class="texto text-light">Nos encontramos organizaciones <br>sociales, cooperativas productivas,<br> trabajadores y trabajadoras del agro, todos bajo la consigna de proveer alimentos sanos.</p>
             <div class="conoce">
-                <hr style=" width: 15%; height: 10px; background-color: #B7451C; text-align:left;margin-left:0; border-radius: 5px 5px 5px 5px;">
+                <hr class="line">
                 <a class="etiqueta" href="hacen">conoce más</a>
             </div>
-                
+
         </div>
     </article>
-    <article class="container-fluid" id="video">
+    <article class="container-fluid video">
 
     </article>
     <article class="container-sm map">
@@ -270,9 +288,9 @@
 
         </div>
     </article>
-    <article class="container-fluid" id="footer">
-        <div class="container-sm">
-            <hr>
+    <article class="container-fluid footer">
+        <div class="container fondo-icon">
+            <hr class="line-icon">
             <div class="row align-items-center">
                 <div class="col"><img src="{{ asset('img/iconos/A-T.png') }}"></div>
                 <div class="col"><img src="{{ asset('img/iconos/Sindicato-Trabajadores-Pasivos.png') }}"></div>
@@ -293,7 +311,7 @@
                 <div class="col"><img src="{{ asset('img/iconos/Gob-Nac.png') }}"></div>
                 <div class="col"><img src="{{ asset('img/iconos/scra.png') }}"></div>
             </div>
-            <hr>
+            <hr class="line-icon">
 
         </div>
     </article>

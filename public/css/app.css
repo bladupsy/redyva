@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
 @charset "UTF-8";
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -2679,13 +2680,13 @@ fieldset:disabled a.btn {
 
 .btn-orange {
     color: #fff;
-    background-color: #d03e0d !important;
-    border-color: #d03e0d !important;
+    background-color: #E94E1A !important;
+    border-color: ##E94E1A !important;
 }
 .btn-orange:hover {
     color: #fff;
-    background-color: #e94e1a !important;
-    border-color: #e94e1a !important;
+    background-color: #f36f43 !important;
+    border-color: #f36f43 !important;
 }
 .btn-success {
     color: #fff;
@@ -20892,4 +20893,5 @@ a.text-dark:focus {
         color: inherit;
         border-color: #dee2e6;
     }
+   
 }

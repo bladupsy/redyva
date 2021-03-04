@@ -14,7 +14,7 @@
 
         }
 
-        #quienes {
+        .quienes {
             background-image: url("{{ asset('img/quienes.png') }}");
             background-size: cover;
             padding-top: 200px;
@@ -35,14 +35,14 @@
 
         }
 
-        #organizaciones {
+        .organizaciones {
             padding-top: 126px;
             min-height: 200px;
         }
 
-        .hr {}
 
-        #circulo {
+
+        .circulo {
             height: 10px;
             width: 10px;
             background: rgba(233, 78, 26, 0.2);
@@ -55,7 +55,7 @@
 
         }
 
-        #cuadrado {
+        .cuadrado {
             width: 324px;
             height: 10px;
             background-color: rgba(233, 78, 26, 0.2);
@@ -69,7 +69,6 @@
 
         .font {
             font-family: 'Montserrat', sans-serif;
-
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
@@ -80,7 +79,7 @@
             align-items: left;
         }
 
-        #icon {
+        .icon {
             margin-left: 174px;
             margin-right: 175px;
             height: 172px;
@@ -88,18 +87,26 @@
 
         }
 
-        #icono {
+        .icono {
             margin-left: 220px;
             height: 172px;
             padding-top: 80px;
 
         }
 
-        #ente {
+        .ente {
             margin-left: 220px;
             height: 172px;
             padding-top: 80px;
             min-height: 300px;
+        }
+
+        .line {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            padding: 0.75rem;
+            border-top: 1px dashed #000 !important;
         }
     </style>
 </head>
@@ -120,17 +127,17 @@
         </div>
     </nav>
 
-    <article class="container-fluid" id="quienes">
+    <article class="container-fluid quienes">
 
     </article>
-    <article class="container-fluid" id="organizaciones">
+    <article class="container-fluid organizaciones">
         <br>
         <div class="row align-items-center ">
-            <div id="cuadrado" class=""></div>
-            <div id="circulo" class=""></div>
-            <div class="font">&nbsp;Organizaciones sociales </div>
+            <div class="cuadrado"></div>
+            <div class="circulo"></div>
+            <div class="font">Organizaciones sociales </div>
         </div>
-        <div class="row align-items-center" id="icon">
+        <div class="row align-items-center icon">
             <div class="col"><img src="{{ asset('img/iconos/A-T.png') }}"></div>
             <div class="col"><img src="{{ asset('img/iconos/Sindicato-Trabajadores-Pasivos.png') }}"></div>
             <div class="col"><img src="{{ asset('img/iconos/Frente-Patria.png') }}"></div>
@@ -138,44 +145,45 @@
             <div class="col"><img src="{{ asset('img/iconos/Artefimera.png') }}"></div>
             <div class="col"><img src="{{ asset('img/iconos/ATE.png') }}"></div>
         </div>
-        <div class="row align-items-center " id="organizaciones">
-            <div id="cuadrado" class=""></div>
-            <div id="circulo" class=""></div>
-            <div class="font">&nbsp;Cooperativas productivas</div>
+        <div class="row align-items-center organizaciones">
+            <div class="cuadrado"></div>
+            <div class="circulo"></div>
+            <div class="font">Cooperativas productivas</div>
         </div>
-        <div class="row align-items-center" id="icono">
+        <div class="row align-items-center icono">
             <div class="col"><img src="{{ asset('img/iconos/Coop-Mbarete.png') }}"></div>
             <div class="col"><img src="{{ asset('img/iconos/Nuestras-Raices.png') }}"></div>
             <div class="col"><img src="{{ asset('img/iconos/Las-Tunas.png') }}"></div>
         </div>
-        <div class="row align-items-center " id="organizaciones">
-            <div id="cuadrado" class=""></div>
-            <div id="circulo" class=""></div>
-            <div class="font">&nbsp;Entes provinciales</div>
+        <div class="row align-items-center organizaciones">
+            <div class="cuadrado"></div>
+            <div class="circulo"></div>
+            <div class="font">Entes provinciales</div>
         </div>
-        <div class="row align-items-center " id="icono">
+        <div class="row align-items-center icono">
             <div class="col"><img src="{{ asset('img/iconos/Gob.png') }}"></div>
             <div class="col"><img src="{{ asset('img/iconos/Coop.png') }}"></div>
             <div class="col"><img src="{{ asset('img/iconos/Municipalidad.png') }}"></div>
 
         </div>
-        <div class="row align-items-center " id="organizaciones">
-            <div id="cuadrado" class=""></div>
-            <div id="circulo" class=""></div>
-            <div class="font">&nbsp;Entes nacionales</div>
+        <div class="row align-items-center organizaciones">
+            <div class="cuadrado"></div>
+            <div class="circulo"></div>
+            <div class="font">Entes nacionales</div>
         </div>
-        <div class="row align-items-center " id="ente">
+        <div class="row align-items-center ente">
             <div class="col"><img src="{{ asset('img/iconos/SENASA.png') }}"></div>
             <div class="col"><img src="{{ asset('img/iconos/INTA.png') }}"></div>
             <div class="col"><img src="{{ asset('img/iconos/Gob-Nac.png') }}"></div>
             <div class="col"><img src="{{ asset('img/iconos/scra.png') }}"></div>
         </div>
-        <div class="container-sm" id="organizaciones">
-            <hr style=" background-color:  #000000; ">
+        <div class="container-sm organizaciones">
+            <hr class="line >
         </div>
 
     </article>
-    <script src="{{asset('js/app.js')}}" type="text/javascript"></script>
+    <script src=" {{asset('js/app.js')}}" type="text/javascript">
+            </script>
 </body>
 
 </html>
