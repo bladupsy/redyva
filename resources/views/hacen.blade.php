@@ -20,7 +20,7 @@
     }
 
     .persona {
-      
+
       width: 750px;
       height: 550px;
       margin-left: -20px;
@@ -29,15 +29,22 @@
     }
 
     .somos {
-      padding-top: 100px;
-      padding-right: 100px;
-
+      padding-top: 70px;
+      padding-right: 50px;
       width: 413px;
       height: 1366px;
       font-family: 'Montserrat', sans-serif;
       font-size: 18px;
       line-height: 30px;
+      margin-left: -80px;
 
+    }
+    .leer {
+      padding-top: -100px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      line-height: 30px;
+      margin-left: -80px;
     }
   </style>
 </head>
@@ -58,14 +65,25 @@
     </div>
   </nav>
   <article class="container-fluid">
-  <div class="row justify-content-center">
-    <div class="col-8">
-      <img src="{{ asset('img/personas.png') }}" class="persona">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <img src="{{ asset('img/personas.png') }}" class="persona">
+      </div>
+      <div class="col-4">
+        <p class="somos"><b >Somos una red con convicciones</b><br>
+          De dónde procede el concepto de soberanía alimentaria: El concepto de <br>
+          soberanía alimentaria fue desarrollado por Vía Campesina y llevado al debate público <br>
+          con ocasión de la Cumbre Mundial de la Alimentación en 1996, y ofrece una <br>
+          alternativa a las políticas neoliberales. <br>
+          Desde entonces, dicho concepto se<br>
+          ha convertido en un tema mayor del debate agrario internacional, inclusive en <br>
+          el seno de las instancias de las Naciones Unidas. Fue el tema principal del foro<br> 
+          ONG paralelo a la cumbre mundial de la alimentacion de la FAO de junio del 2002.
+        </p>
+        <a class="leer"><b>Leer más</b></a>
+          
+      </div>
     </div>
-    <div class="col-4">
-      One of two columns
-    </div>
-  </div>
   </article>
 
   <script src="{{asset('js/app.js')}}" type="text/javascript"></script>

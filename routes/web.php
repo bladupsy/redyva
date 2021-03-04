@@ -28,12 +28,13 @@ Route::get('/hacen', function () {
 Route::get('/puntos', function () {
     return view('puntos');
 });
-Route::get('/producto', function () {
-    return view('producto');
+Route::get('/bolson', function () {
+    return view('bolson');
 });
 Route::get('/index', function () {
     return view('index');
 });
+
 
 //Rutas del Modal
 Route::get('/pesado', function () {

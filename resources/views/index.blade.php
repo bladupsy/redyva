@@ -175,6 +175,9 @@
             padding: 0.75rem;
             border-top: 1px dashed #000 !important;
         }
+        .grupo-botones {
+            margin-left: 60px;
+        }
     </style>
 </head>
 
@@ -189,7 +192,7 @@
             <ul class="nav justify-content-end">
                 <a class="nav-link text-orange" href="quienes">Quienes <br>somos</a>
                 <a class="nav-link text-orange" href="hacen">Qué <br>hacemos</a>
-                <a class="nav-link text-orange"> Conseguí <br>tú bolsón</a>
+                <a class="nav-link text-orange" href="bolson"> Conseguí <br>tú bolsón</a>
                 <a class="nav-link text-orange" href="puntos">Puntos de<br> distribución</a>
 
 
@@ -217,7 +220,7 @@
                                 <h4 class="modal-title">seleccioná tu bolsón</h4>
                                 <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body grupo-botones">
 
                                 <p><a href="pesado" role="button" class="btn btn-outline-orange text-dark rounded-pill hello"><b>pesado<b></a>
                                     <a href="citrus" role="button" class="btn btn-outline-orange text-dark rounded-pill hello"><b>citrus<b></a>
