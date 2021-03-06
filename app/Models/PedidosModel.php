@@ -10,9 +10,9 @@ class PedidosModel extends Model
 {
     use HasFactory;
 
-    function hacerPedido($nombreUser, $apellidoUser, $emailUser, $direccionUser, $bolson, $aDomicilio, $sucursal, $fechaRetiro){
+    function hacerPedido($nombreUser, $apellidoUser, $emailUser, $direccionUser, $bolson, $aDomicilio, $sucursal){
         $userConsulta = DB::table('pedidos')->insert(
-            array('nombre'=>$nombreUser, 'apellido'=>$apellidoUser, 'email'=>$emailUser, 'direccion'=>$direccionUser, 'bolson'=>$bolson, 'aDomicilio'=>$aDomicilio, 'sucursal'=>$sucursal, 'fechaRetiro'=>$fechaRetiro)
+            array('nombre'=>$nombreUser, 'apellido'=>$apellidoUser, 'email'=>$emailUser, 'direccion'=>$direccionUser, 'bolson'=>$bolson, 'aDomicilio'=>$aDomicilio, 'sucursal'=>$sucursal)
         );
         return $userConsulta;
     }

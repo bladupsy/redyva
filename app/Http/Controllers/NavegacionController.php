@@ -25,21 +25,27 @@ class NavegacionController extends Controller
     function index(){
         return view('index');
     }
+
     function pesado(){
         return view('pesado');
     }
+
     function citrus(){
         return view('citrus');
     }
+
     function verde(){
         return view('verde');
     }
+
     function pedirPesado(){
         return view('pedir-pesado');
     }
+
     function pedirCitrus(){
         return view('pedir-citrus');
     }
+    
     function pedirVerde(){
         return view('pedir-verde');
     }

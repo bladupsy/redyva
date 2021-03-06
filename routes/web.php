@@ -8,12 +8,6 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 /*Rutas en las cuales se manejan las redireciones entre paginas */
 
@@ -43,11 +37,11 @@ Route::get('/pedir-pesado', [App\Http\Controllers\NavegacionController::class, '
 Route::get('/pedir-citrus', [App\Http\Controllers\NavegacionController::class, 'pedirCitrus']);
 Route::get('/pedir-verde', [App\Http\Controllers\NavegacionController::class, 'pedirVerde']);
 
-
 //Rutas del fomulario
 Route::get('/formulario', function () {
     return view('formulario');
 });
+
 //Ruta de Administrador
 Route::get('/admin', function () {
     return view('admin');

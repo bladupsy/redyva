@@ -8,16 +8,16 @@
 </head>
 <body>
     <h1>Comprobante Pedido</h1>
-    <b>Posadas, </b>
+    <b>Posadas</b>
     <div id="nombre-direccion">
-        <h2></h2>
+        <h2><?php echo $pdfNombre." ".$pdfApellido ?> | <?php echo $pdfDireccion ?></h2>
     </div>
-    <b>Sucursal: </b>
+    <b>Sucursal: <?php echo $pdfSucursal ?></b>
     <div id="titulos">
-        <div class="titulos-contenido">Bolsón: </div>
+        <div class="titulos-contenido">Bolsón: <?php echo $pdfBolson ?></div>
         <div class="titulos-contenido">Productos: </div>
-        <div class="titulos-contenido">Fecha Retiro: </div>
-        <div class="titulos-contenido">Precio: </div>
+        <div class="titulos-contenido">Precio: <?php if($pdfBolson == "verde" || $pdfBolson == "citrus"){echo "$250";} else{echo "$300";}
+        ?></div>
     </div>
     <div id="contenido">
         <div id="contenido-contenido"><p> </p></div>
