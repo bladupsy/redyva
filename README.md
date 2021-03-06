@@ -11,13 +11,13 @@
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   [Simple, fast routing engine](https://laravel.com/docs/routing).
+-   [Powerful dependency injection container](https://laravel.com/docs/container).
+-   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+-   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+-   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+-   [Robust background job processing](https://laravel.com/docs/queues).
+-   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
@@ -33,17 +33,17 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
+-   **[Vehikl](https://vehikl.com/)**
+-   **[Tighten Co.](https://tighten.co)**
+-   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+-   **[64 Robots](https://64robots.com)**
+-   **[Cubet Techno Labs](https://cubettech.com)**
+-   **[Cyber-Duck](https://cyber-duck.co.uk)**
+-   **[Many](https://www.many.co.uk)**
+-   **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+-   **[DevSquad](https://devsquad.com)**
+-   **[Curotec](https://www.curotec.com/)**
+-   **[OP.GG](https://op.gg)**
 
 ## Contributing
 
@@ -65,7 +65,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 Para utilzar bootstrap he instalado atraves de composer los paquetes:
 Instalación paquete Laravel/ui
-   composer require laravel/ui
+composer require laravel/ui
 Después de instalar el paquete anterior, estamos listos para instalar Boostrap 4 en nuestro proyecto.
 
 Instalación Boostrap 4:
@@ -79,6 +79,7 @@ Sino en cambio lo podemos instalar a traves de Composer Bootstrap 5
 <pre><code>composer require twbs/bootstrap:5.0.0-beta2 </code></pre>
 
 Para instalar los iconos de Bootstrap 5
+
 <pre><code>npm i bootstrap-icons</code></pre>
 
 Para poder instalar todas las dependencias que necesitamos, debemos instalar npm en nuestro proyecto (para instalar npm debemos tener instalado Node Js en nuestra computadora):
@@ -101,5 +102,38 @@ Y justo antes de finalizar el body lo siguiente:
 <script src="{{asset('js/app.js')}}"></script>
 
 ## Instale Leaflet
- Através de npm con el siguiente comando
+
+Através de npm con el siguiente comando
+
  <pre><code>npm install leaflet</code><pre>
+
+
+
+## Dependencias DOMPDF para generar archivo pdf
+
+// Hay que colocarle target="_blank" como atributo en el HTML
+
+Poner los siguientes comandos:
+<pre><code>composer require barryvdh/laravel-dompdf</code></pre>
+
+En config /app.php poner en "Providers" este codigo:
+
+-   Barryvdh\DomPDF\ServiceProvider::class,
+
+y en "aliases" el otro:
+
+-   'PDF' => Barryvdh\DomPDF\Facade::class,
+
+Luego:
+
+<pre><code>php artisan vendor:publish</code></pre> (el 1 o todos)
+
+En el controllador usado va:
+
+-   use Barryvdh\DomPDF\Facade as PDF;
+
+Limpiar cache :
+
+<pre><code>php artisan cache:clear</code></pre>
+
+Cerrar el servidor, el Visual Code, y volverlo a abrir.
