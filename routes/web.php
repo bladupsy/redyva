@@ -13,11 +13,55 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function(){
-    return view('princ');
+
+/*Rutas en las cuales se manejan las redireciones entre paginas */
+
+Route::get('/', function () {
+    return view('welcome');
+});
+//Rutas del nav
+Route::get('/quienes', function () {
+    return view('quienes');
+});
+Route::get('/hacen', function () {
+    return view('hacen');
+});
+Route::get('/puntos', function () {
+    return view('puntos');
+});
+Route::get('/bolson', function () {
+    return view('bolson');
+});
+Route::get('/index', function () {
+    return view('index');
 });
 
-// hay que poner dos comandos despues de crear
-// 1) composer install
-// 2) cp .env.example .env
-// 3) php artisan key:generate
+
+//Rutas del Modal
+Route::get('/pesado', function () {
+    return view('pesado');
+});
+
+Route::get('/citrus', function () {
+    return view('citrus');
+});
+Route::get('/verde', function () {
+    return view('verde');
+});
+//Rutas para el formulario de los diferentes bolsones
+Route::get('/pedir-pesado', function () {
+    return view('pedir-pesado');
+});
+Route::get('/pedir-citrus', function () {
+    return view('pedir-citrus');
+});
+Route::get('/pedir-verde', function () {
+    return view('pedir-verde');
+});
+//Rutas del fomulario
+Route::get('/formulario', function () {
+    return view('formulario');
+});
+//Ruta de Administrador
+
+

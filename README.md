@@ -1,13 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
+# About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
@@ -62,19 +53,63 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Como Levantar proyecto
+
  Para agregar las dependencias de composer
 
-  <pre><code> Composer install</code></pre>
+`Composer install`
 
 Para instalar laravel:
-<pre><code> composer global require laravel/installer </code></pre>
+`composer global require laravel/installer`
 
 Para clonar en .env
- <pre><code>`cp .env.example .env`</code></pre>
-
+ `cp .env.example .env`
 
 Sin datos comprobables o entendibles:
-<pre><code> `php artisan key:generate ` </code></pre>
+ `php artisan key:generate`
 
+ Sección Frontend
 
+Para utilzar bootstrap he instalado atraves de composer los paquetes:
+`Instalación paquete Laravel/ui`
 
+`composer require laravel/ui`
+
+Después de instalar el paquete anterior, estamos listos para instalar Boostrap 4 en nuestro proyecto.
+
+Instalación Boostrap 4:
+
+`php artisan ui bootstrap`
+
+Recurso obtenido en [Codersfree](https://codersfree.com/blog/como-instalar-bootstrap-4-en-tu-proyecto-laravel-7).
+
+Sino en cambio lo podemos instalar a traves de Composer Bootstrap 5
+
+`composer require twbs/bootstrap:5.0.0-beta2`
+
+Para instalar los iconos de Bootstrap 5
+`npm i bootstrap-icons`
+
+Para poder instalar todas las dependencias que necesitamos, debemos instalar npm en nuestro proyecto (para instalar npm debemos tener instalado Node Js en nuestra computadora):
+Instalación npm
+
+ ` npm install `
+
+Compilar nuestros archivos
+
+  `npm run dev`
+
+Listo, ya tenemos nuestros archivos js y css listo para utilizar.
+
+Para poder usarlos debemos escribir en el head de nuestra plantilla lo siguiente:
+
+`<link rel="stylesheet" href="{{asset('css/app.css')}}">
+
+Y justo antes de finalizar el body lo siguiente:
+
+`<script src="{{asset('js/app.js')}}"></script>
+
+## Instale Leaflet
+
+ Através de npm con el siguiente comando
+
+`npm install leaflet`
