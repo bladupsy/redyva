@@ -178,6 +178,7 @@
         .grupo-botones {
             margin-left: 60px;
         }
+        
     </style>
 </head>
 
@@ -255,13 +256,13 @@
 
     </article>
     <article class="container-sm map">
-        <div class="container-sm row justify-content-between">
+        <div class="container-sm row justify-content-between pizzarra mx-auto">
             <div class="col-4"><br><br><br>
-                <a type="button" class="btn btn-outline-orange rounded-pill" href="puntos">&nbsp;&nbsp;Áca podés encontrar los <br> puntos de distribución&nbsp;&nbsp;</a>
+                <a type="button" class="btn btn-outline-orange rounded-pill" href="puntos">Áca podés encontrar los <br> puntos de distribución</a>
                 <br>
-                <p class="text-orange"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>Posadas</strong></p>
+                <p class="text-orange"><strong>>Posadas</strong></p>
             </div>
-            <div class="col-4"><img src="{{ asset('img/pizzarra.png') }}" width="156px" height="156px"></div>
+            <div class="col-4 "><img src="{{ asset('img/pizzarra.png') }}" width="156px" height="156px" style="margin-left: 130px;"></div>
         </div>
         <div id='map'>
             <script type="text/javascript">

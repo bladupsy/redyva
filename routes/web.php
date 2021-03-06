@@ -57,6 +57,10 @@ Route::get('/pedir-citrus', function () {
 Route::get('/pedir-verde', function () {
     return view('pedir-verde');
 });
+//Rutas del fomulario
+Route::get('/formulario', function () {
+    return view('formulario');
+});
 //Ruta de Administrador
 Route::get('/admin', function () {
     return view('admin');

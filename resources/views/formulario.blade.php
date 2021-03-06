@@ -11,7 +11,7 @@
         <style>
             .fondo-inicio {
                 position: relative;
-                background-image: url("{{ asset('img/tomate.png') }}");
+                background-image: url("{{ asset('img/verde.png') }}");
                 background-size: cover;
                 padding-top: 200px;
                 min-height: 450px;
@@ -109,7 +109,7 @@
             </div>
             <div class="row align-items-start">
                 <div class="col-8">
-                    <h6 class="card-subtitle text-dark">pesado</h6>
+                    <h6 class="card-subtitle text-dark">verde</h6>
                 </div>
 
             </div>
@@ -119,13 +119,13 @@
                     <tbody>
                         <tr>
                             <td class="separador-derecho">Llevas <b>1<br> bolsón pesado</b></td>
-                            <td class="precio">$250</td>
+                            <td class="precio">$300</td>
                         </tr>
 
                     </tbody>
                 </table>
                 <hr class="line">
-                <a class="btn btn-orange text-light rounded-pill pedido" href="formulario" >confirmar pedido</a>
+                <button class="btn btn-orange text-light rounded-pill pedido">confirmar pedido</button>
             </div>
             </p>
         </div>
