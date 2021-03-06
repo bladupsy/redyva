@@ -29,6 +29,7 @@ Route::get('/quienes', [App\Http\Controllers\NavegacionController::class, 'quien
 Route::get('/hacen', [App\Http\Controllers\NavegacionController::class, 'hacen']);
 Route::get('/puntos', [App\Http\Controllers\NavegacionController::class, 'puntos']);
 Route::get('/producto', [App\Http\Controllers\NavegacionController::class, 'producto']);
+Route::get('/bolson', [App\Http\Controllers\NavegacionController::class, 'bolson']);
 Route::get('/index', [App\Http\Controllers\NavegacionController::class, 'index']);
 Route::post('/contactar', [App\Http\Controllers\ContactoController::class, 'contactar']);
 Route::post('/pedido', [App\Http\Controllers\PedidosController::class, 'realizarPedido']);

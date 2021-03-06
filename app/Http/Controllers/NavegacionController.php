@@ -22,6 +22,10 @@ class NavegacionController extends Controller
         return view('producto');
     }
 
+    function bolson(){
+        return view('bolson');
+    }
+
     function index(){
         return view('index');
     }
