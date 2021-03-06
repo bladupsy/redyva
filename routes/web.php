@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*Rutas en las cuales se manejan las redireciones entre paginas */
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -28,15 +30,38 @@ Route::get('/producto', [App\Http\Controllers\NavegacionController::class, 'prod
 Route::get('/index', [App\Http\Controllers\NavegacionController::class, 'index']);
 Route::post('/contactar', [App\Http\Controllers\ContactoController::class, 'contactar']);
 Route::post('/pedido', [App\Http\Controllers\PedidosController::class, 'realizarPedido']);
-
-
 /*
 Route::get('lista', function(){
     return view('lista');
 })->name('lista');
+*/
 
+//Rutas del Modal
+Route::get('/pesado', function () {
+    return view('pesado');
+});
 
-Route::get('lista/{nombre?}', function ($nombre=null) {
-    $productos=['pescado', 'citrus', 'verde' ];
-    return view('lista', array('productos'=>$producto, 'nombre' => $nombre));
-}) ->name('lista');*/
+Route::get('/citrus', function () {
+    return view('citrus');
+});
+Route::get('/verde', function () {
+    return view('verde');
+});
+//Rutas para el formulario de los diferentes bolsones
+Route::get('/pedir-pesado', function () {
+    return view('pedir-pesado');
+});
+Route::get('/pedir-citrus', function () {
+    return view('pedir-citrus');
+});
+Route::get('/pedir-verde', function () {
+    return view('pedir-verde');
+});
+//Rutas del fomulario
+Route::get('/formulario', function () {
+    return view('formulario');
+});
+//Ruta de Administrador
+Route::get('/admin', function () {
+    return view('admin');
+});
