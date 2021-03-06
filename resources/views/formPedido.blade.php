@@ -67,10 +67,11 @@
             margin-right: 10px;
             margin-bottom: 20px;
         }
+
         .ingreso-2 {
             margin-right: 10px;
             margin-left: 20px;
-            
+
 
         }
 
@@ -88,11 +89,17 @@
             border-bottom: 1px solid #000 !important;
             background-color: #F2F2F2 !important;
         }
+
         .enviar {
             margin-left: 350px;
             margin-top: 20px;
             margin-bottom: 20px;
         }
+        .flecha-volver {
+                margin-left: 150px;
+                color: #878787 !important;
+                margin-top: 80px;
+            }
     </style>
 
 </head>
@@ -141,26 +148,26 @@
                         <input type="text" name="direccionGG" id="inputDireccion" class="datos" style="width: 430px;"><br>
                     </div>
                     <div class="row ingreso-2">
-                            <div class="col">
-                          
-                                <input type="radio" name="domicilio" id="" value="domicilio" require checked>Envio adomicilio<br>
-                            </div>
-                            <div class="col">
-                                <input type="radio" name="domicilio" id="" value="retirar">Retirar en sucursal<br>
-                                <div id="div-vacio"></div>
+                        <div class="col">
 
-                            </div>
+                            <input type="radio" name="domicilio" id="" value="domicilio" require checked>Envio adomicilio<br>
+                        </div>
+                        <div class="col">
+                            <input type="radio" name="domicilio" id="" value="retirar">Retirar en sucursal<br>
+                            <div id="div-vacio"></div>
+
+                        </div>
 
                     </div>
                     <div class="col-12 ingreso">
-                    <label for="inputFecha" class="form-label">Fecha de entrega</label>
+                        <label for="inputFecha" class="form-label">Fecha de entrega</label>
                         <input type="date" name="fechaGG" id="inputFecha" class=""><br>
 
                     </div>
-                        <div class="enviar">
-                            <button id="btnPedido" class="btn btn-orange text-light rounded-pill">Hacer Pedido</button>
+                    <div class="enviar">
+                        <button id="btnPedido" class="btn btn-orange text-light rounded-pill">Hacer Pedido</button>
 
-                        </div>
+                    </div>
 
 
                 </form>
