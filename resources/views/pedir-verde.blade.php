@@ -125,7 +125,7 @@
                     </tbody>
                 </table>
                 <hr class="line">
-                <a class="btn btn-orange text-light rounded-pill pedido" href="formulario">confirmar pedido</a>
+                <a class="btn btn-orange text-light rounded-pill pedido" href="formPedido">confirmar pedido</a>
             </div>
             </p>
         </div>

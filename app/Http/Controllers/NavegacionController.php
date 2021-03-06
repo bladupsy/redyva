@@ -47,4 +47,8 @@ class NavegacionController extends Controller
     function pedirVerde(){
         return view('pedir-verde');
     }
+    function formPedido(){
+        return view(' formPedido');
+    }
+
 }

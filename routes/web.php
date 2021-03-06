@@ -43,6 +43,8 @@ Route::get('/verde', [App\Http\Controllers\NavegacionController::class, 'verde']
 Route::get('/pedir-pesado', [App\Http\Controllers\NavegacionController::class, 'pedirPesado']);
 Route::get('/pedir-citrus', [App\Http\Controllers\NavegacionController::class, 'pedirCitrus']);
 Route::get('/pedir-verde', [App\Http\Controllers\NavegacionController::class, 'pedirVerde']);
+Route::get('/formPedido', [App\Http\Controllers\NavegacionController::class, 'formPedido']);
+
 
 
 //Rutas del fomulario

@@ -44,27 +44,30 @@
         /* identical to box height */
         letter-spacing: -0.01em;
       }
+
       .flecha-volver {
         margin-left: 200px;
         margin-top: 20px;
-        
+
       }
+
       .line {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
         padding: 0.75rem;
-        border-top: 2px  dashed #e94e1a !important;
+        border-top: 2px dashed #e94e1a !important;
         width: 420px;
         border-bottom-right-radius: calc(0.3rem - 1px);
         border-bottom-left-radius: calc(0.3rem - 1px);
       }
+
       .line-one {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
         padding: 0.75rem;
-        border-top: 2px  solid #e94e1a !important;
+        border-top: 2px solid #e94e1a !important;
         width: 420px;
         border-bottom-right-radius: calc(0.3rem - 1px);
         border-bottom-left-radius: calc(0.3rem - 1px);
