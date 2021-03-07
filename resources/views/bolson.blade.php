@@ -104,6 +104,9 @@
         .grupo-botones {
             margin-left: 70px;
         }
+        .card-title {
+            margin-left: 20px;
+        }
         </style>
     </head>
 

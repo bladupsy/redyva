@@ -27,7 +27,7 @@
 
       .card-center {
         z-index: 99;
-        margin-top: -180px;
+        margin-top: -300px;
       }
 
       .separador-derecho {
@@ -44,50 +44,58 @@
         /* identical to box height */
         letter-spacing: -0.01em;
       }
+
       .flecha-volver {
-        margin-left: 200px;
-        margin-top: 20px;
-        
+        margin-left: 300px;
+        margin-top: 80px;
+
       }
+
       .line {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
         padding: 0.75rem;
-        border-top: 2px  dashed #e94e1a !important;
+        border-top: 2px dashed #e94e1a !important;
         width: 420px;
         border-bottom-right-radius: calc(0.3rem - 1px);
         border-bottom-left-radius: calc(0.3rem - 1px);
       }
+
       .line-one {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
         padding: 0.75rem;
-        border-top: 2px  solid #e94e1a !important;
+        border-top: 2px solid #e94e1a !important;
         width: 420px;
         border-bottom-right-radius: calc(0.3rem - 1px);
         border-bottom-left-radius: calc(0.3rem - 1px);
+      }
+      .separador {
+        margin-left: 100px;
       }
     </style>
   </head>
 
 <body>
-  <div class="container-fluid fondo-inicio"></div>
-  <div class="container-sm">
+  <div class="container-fluid fondo-inicio">
+    
+        <div class="flecha-volver">
+          <a href="index"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-arrow-left-circle " viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+            </svg></a>
+        </div>
+      </div>
 
-    <div class="flecha-volver">
-      <a href="index"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="dark" class="bi bi-arrow-left-circle " viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
-        </svg></a>
-    </div>
   </div>
+  <div class="container-sm">
   <div>
 
     <div class="card card-center mx-auto" style="width:  30rem;">
       <!--mx: margin igual -->
       <div class="card-body">
-        <h5 class="card-title">selecciona tú bolsón<b> para el:</b> viernes </h5>
+        <h5 class="card-title">selecciona tú bolsón<b class="separador"> para el:</b> viernes </h5>
         <hr class="line-one">
         <div>
         </div>
