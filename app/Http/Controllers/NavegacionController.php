@@ -56,5 +56,8 @@ class NavegacionController extends Controller
     function formPedido(){
         return view(' formPedido');
     }
+    function comprobante(){
+        return view('comprobante');
+    }
 
 }

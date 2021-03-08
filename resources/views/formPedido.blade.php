@@ -95,11 +95,12 @@
             margin-top: 20px;
             margin-bottom: 20px;
         }
+
         .flecha-volver {
-                margin-left: 150px;
-                color: #878787 !important;
-                margin-top: 80px;
-            }
+            margin-left: 150px;
+            color: #878787 !important;
+            margin-top: 80px;
+        }
     </style>
 
 </head>
@@ -159,13 +160,9 @@
                         </div>
 
                     </div>
-                    <div class="col-12 ingreso">
-                        <label for="inputFecha" class="form-label">Fecha de entrega</label>
-                        <input type="date" name="fechaGG" id="inputFecha" class=""><br>
 
-                    </div>
                     <div class="enviar">
-                        <button id="btnPedido" class="btn btn-orange text-light rounded-pill">Hacer Pedido</button>
+                        <a id="btnPedido" class="btn btn-orange text-light rounded-pill" href="comprobante">Hacer Pedido</a>
 
                     </div>
 
