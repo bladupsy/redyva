@@ -38,7 +38,7 @@ Route::get('/pedir-pesado', [App\Http\Controllers\NavegacionController::class, '
 Route::get('/pedir-citrus', [App\Http\Controllers\NavegacionController::class, 'pedirCitrus']);
 Route::get('/pedir-verde', [App\Http\Controllers\NavegacionController::class, 'pedirVerde']);
 Route::get('/formPedido', [App\Http\Controllers\NavegacionController::class, 'formPedido']);
-Route::get('/comprobante', [App\Http\Controllers\NavegacionController::class, 'comprobante']);
+Route::get('/comprobante', [App\Http\Controllers\PdfController::class, 'pdfGenerate']);
 
 //Rutas del fomulario
 Route::get('/formulario', function () {

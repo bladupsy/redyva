@@ -1,6 +1,6 @@
+<?php $idbolson = $_GET['bolson'];?>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}" type="text/css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <title>Redyva</title>
-
     <style>
         .fondo-inicio {
             position: relative;
@@ -31,7 +30,6 @@
             margin-top: -180px;
         }
 
-
         .line-one {
             display: flex;
             flex-wrap: wrap;
@@ -42,8 +40,6 @@
             border-bottom-right-radius: calc(0.3rem - 1px);
             border-bottom-left-radius: calc(0.3rem - 1px);
         }
-
-
 
         .card-subtitle {
             margin-top: -10px;
@@ -71,8 +67,6 @@
         .ingreso-2 {
             margin-right: 10px;
             margin-left: 20px;
-
-
         }
 
         .card-title {
@@ -81,7 +75,6 @@
 
         .separador {
             padding-left: 150px;
-
         }
 
         .datos {
@@ -102,14 +95,10 @@
             margin-top: 80px;
         }
     </style>
-
 </head>
-
 <body>
     <div class="container-fluid fondo-inicio">
-
         <div class="container-sm">
-
             <div class="flecha-volver">
                 <a href="index"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-arrow-left-circle " viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
@@ -119,7 +108,7 @@
         <div class="card card-center mx-auto" style="width:  35rem;">
             <!--mx: margin igual -->
             <div class="card-body">
-                <h5 class="card-title">selecciona tú bolsón<b class="separador"> para el:</b> viernes </h5>
+                <h5 class="card-title">Tú bolsón: <input size="2" type="text" readonly id="bol" value="<?php echo $idbolson ?>"><b class="separador"> para el:</b> viernes </h5>
                 <hr class="line-one">
                 <div>
                 </div>
@@ -133,80 +122,156 @@
                     <div class="row ingreso">
                         <div class="col">
                             <label for="inputNombre" class="form-label">Nombre</label><br>
-                            <input type="text" name="nombreGG" id="inputNombre" placeholder="nombre" class="datos">
+                            <input required type="text" name="nombreGG" id="inputNombre" placeholder="Nombre" class="datos">
                         </div>
                         <div class="col">
                             <label for="inputApellido" class="form-label">Apellido</label>
-                            <input type="text" name="apellidoGG" id="inputApellido" placeholder="Apellido" class="datos">
+                            <input required type="text" name="apellidoGG" id="inputApellido" placeholder="Apellido" class="datos">
                         </div>
                     </div>
                     <div class="col-12 ingreso">
                         <label for="inputEmail" class="form-label">Correo Electronico</label><br>
-                        <input type="email" name="emailGG" id="inputEmail" placeholder="Email" class="datos" style="width: 430px;">
+                        <input required type="email" name="emailGG" id="inputEmail" placeholder="Email" class="datos" style="width: 430px;">
                     </div>
                     <div class="col-12 ingreso">
                         <label for="inputDirección" class="form-label">Dirección</label><br>
-                        <input type="text" name="direccionGG" id="inputDireccion" class="datos" style="width: 430px;"><br>
+                        <input required type="text" name="direccionGG" placeholder="Ingrese su Dirección" id="inputDireccion" class="datos" style="width: 430px;"><br>
                     </div>
                     <div class="row ingreso-2">
                         <div class="col">
-
-                            <input type="radio" name="domicilio" id="" value="domicilio" require checked>Envio adomicilio<br>
+                            <input type="radio" name="domicilio" id="dom" value="domicilio" checked> Envio a domicilio <br>
                         </div>
                         <div class="col">
-                            <input type="radio" name="domicilio" id="" value="retirar">Retirar en sucursal<br>
-                            <div id="div-vacio"></div>
-
+                            <input type="radio" name="domicilio" id="ret" value="retirar"> Retirar en sucursal <br>
+                            <div id="div-vacio"><br></div>
                         </div>
-
                     </div>
-
+                    <meta name="csrf-token" content="<?php echo csrf_token()?>">
                     <div class="enviar">
-                        <a id="btnPedido" class="btn btn-orange text-light rounded-pill" href="comprobante">Hacer Pedido</a>
-
+                        <a id="btnPedido" class="btn btn-orange text-light rounded-pill"  href="#">Hacer Pedido</a>
                     </div>
-
-
                 </form>
             </div>
-            <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!! Aca Viene JavaScript (Jquery) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-            <script>
-                $(document).ready(function() {
-                    let nombreUser = $('#inputNombre').val();
-                    let apellidoUser = $('#inputApellido').val();
-                    let emailUser = $('#inputEmail').val();
-                    let direccionUser = $('#inputDireccion').val();
-                    let fechaUser = $('#inputFecha').val();
-                    let deliveryUser = $('input:radio[name=domicilio]:checked').val();
-
-                    // Al hacer Click en -Retirar- se crea el <select>
-                    $("input[name=domicilio]").click(function() {
-                        $("#div-vacio").empty();
-                        let deliveryUser = $('input:radio[name=domicilio]:checked').val();
-                        if (deliveryUser == "retirar") {
-                            $('#div-vacio').append(`
-                            <select id="seleccion" name="sucursales" required>
-                                <option value="">Seleccione una Sucursal: </option>
-                                <option value="Sucursal1">Sucursal 1 </option>
-                                <option value="Sucursal2">Sucursal 2 </option>
-                                <option value="Sucursal3">Sucursal 3 </option>
-                            </select>
-                        `)
-                        }
-                    });
-
-                    // Prueba de funcionamiento del <Select>
-                    $("#btnPedido").click(function() {
-                        let seleccionado = $('select[id=seleccion]').val();
-                        if (seleccionado == "") {
-                            alert("Debe seleccionar una Sucursal")
-                            console.log($('#inputFecha').val());
-                        }
-                    })
-                })
-            </script>
         </div>
         <script src="{{asset('js/app.js')}}" type="text/javascript"></script>
 </body>
+    <!--!!!! Aca Viene JavaScript (Jquery) !!!!-->
+    <script>
+        $(document).ready(function(){
+            let seleccionado = 0;
+            let deliveryUser = "domicilio";
 
+            // let deliveryUser = $('input:radio[name=domicilio]:checked').val();
+            // Al hacer Click en -Retirar- se crea el <select>
+
+            $('#ret').click(function(){
+                $("#div-vacio").empty();
+                $('#div-vacio').append(`
+                    <select id="seleccion" name="sucursales" required>
+                        <option value="" selected >Seleccione una Sucursal: </option>
+                        <option value="1">Sucursal 1 </option>
+                        <option value="2">Sucursal 2 </option>
+                        <option value="3">Sucursal 3 </option>
+                        <option value="4">Sucursal 4 </option>
+                        <option value="5">Sucursal 5 </option>
+                        <option value="6">Sucursal 6 </option>
+                        <option value="7">Sucursal 7 </option>
+                        <option value="8">Sucursal 8 </option>
+                        <option value="9">Sucursal 9 </option>
+                        <option value="10">Sucursal 10 </option>
+                        <option value="11>Sucursal 11 </option>
+                        <option value="12">Sucursal 12 </option>
+                        <option value="13">Sucursal 13 </option>
+                        <option value="14">Sucursal 14 </option>
+                        <option value="15">Sucursal 15 </option>
+                        <option value="16">Sucursal 16 </option>
+                    </select>
+                    `);
+                deliveryUser = "retirar";
+                // seleccionado = $('select[id=seleccion]').val();                
+                $('#seleccion').change(function(){
+                    seleccionado = $(this).val();
+                    if(seleccionado != ""){
+                        seleccionado = parseInt(seleccionado);
+                    } else{
+                        alert("Si desea retirar el bolson, debe Seleccionar una Sucursal")
+                    }
+                    // Pruebas de Funcionmiento de <select>
+                    // console.log(seleccionado);
+                    // console.log(typeof(seleccionado));
+                    // console.log(deliveryUser);
+                });
+            });
+
+            $('#dom').click(function(){
+                $("#div-vacio").empty();
+                seleccionado = 0;
+                deliveryUser = "domicilio";
+                // los CONSOLE son Prueba Funcionamiento
+                console.log(seleccionado);
+                console.log(deliveryUser);
+            });
+
+            $('#btnPedido').click(function(){
+                if(deliveryUser == "retirar" && seleccionado == ""){
+                    alert("Debe Seleccionar una Sucursal");
+                    location.reload();
+                }
+                
+                let inputNombre = $('#inputNombre').val();
+                let inputApellido = $('#inputApellido').val();
+                let inputEmail = $('#inputEmail').val();
+                let inputDireccion = $('#inputDireccion').val();
+                let variableBolson = $('#bol').val(); // antes estaba #variableBolson
+                variableBolson = parseInt(variableBolson); // Convierto de String a Int
+                let retirarUser = deliveryUser; // Variable Retirar o A domicilio
+                let sucursalUser = seleccionado; // Variable Sucursal Elegida
+
+                // Datos del PDF
+                var name = $('#inputNombre').val();
+                var lastname = $('#inputApellido').val(); 
+                var adress = $('#inputDireccion').val(); 
+                var email = $('#inputEmail').val();
+                var bag = variableBolson;
+                var sucursalname = sucursalUser;
+
+                // Limpio el formulario
+                $('#inputNombre').val("");
+                $('#inputApellido').val("");
+                $('#inputEmail').val("");
+                $('#inputDireccion').val("");
+                $('#div-vacio').empty();
+                $('#dom').attr('checked', true);
+                $.ajax({
+                    url: 'pedido',
+                    type: 'POST',
+                    data: {
+                        inputNombre : inputNombre,
+                        inputApellido : inputApellido,
+                        inputEmail : inputEmail,
+                        inputDireccion : inputDireccion,
+                        variableBolson : variableBolson,
+                        retirarUser : retirarUser,
+                        sucursalUser : sucursalUser
+                    },
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success : function(response){
+                        $("#div-vacio").append(function(){
+
+                            enlacePdf = `<a target="_blank" id="impresiones" href="/comprobante?name=${name}&lastname=${lastname}&email=${email}&adress=${adress}&bag=${bag}&sucursalname=${sucursalname}">Generar PDF</a>`;
+                            $('#impresiones').click(function(){
+                                $("#div-vacio").empty();
+                            });
+                            return enlacePdf;
+                        })
+                    },
+                    error : function(){
+                        alert('Se produjo un error en el Servidor, vuelva a Intentarlo más tarde ');
+                    }
+                })
+            }) //ok  
+        }) //ok
+    </script>
 </html>

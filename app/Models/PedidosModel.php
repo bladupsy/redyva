@@ -12,8 +12,8 @@ class PedidosModel extends Model
 
     function hacerPedido($nombreUser, $apellidoUser, $emailUser, $direccionUser, $bolson, $aDomicilio, $sucursal){
         $userConsulta = DB::table('pedidos')->insert(
-            array('nombre'=>$nombreUser, 'apellido'=>$apellidoUser, 'email'=>$emailUser, 'direccion'=>$direccionUser, 'bolson'=>$bolson, 'aDomicilio'=>$aDomicilio, 'sucursal'=>$sucursal)
+            array('nombre' => $nombreUser, 'apellido' => $apellidoUser, 'email' => $emailUser, 'direccion' => $direccionUser, 'aDomicilio' => $aDomicilio, 'id_bolson' => $bolson, 'id_sucursal' => $sucursal)
         );
-        return $userConsulta;
+        return response($userConsulta);
     }
 }

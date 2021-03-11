@@ -10,27 +10,27 @@ class PedidosController extends Controller
     // método generar pedido en la BD
     function realizarPedido(){
         // Errores 
-        $erroresValidacion = null;
+        $erroresValidacion = [];
         $pedidoModelo = new PedidosModel();
-        $direccionUser = $_POST['direccionUser'];
-        $bolson = $_POST['bolson'];
-        $aDomicilio = $_POST['aDomicilio'];
-        $sucursal = $_POST['sucursal'];
+        $direccionUser = $_POST['inputDireccion'];
+        $bolson = $_POST['variableBolson'];
+        $aDomicilio = $_POST['retirarUser'];
+        $sucursal = $_POST['sucursalUser'];
 
-        if(strlen($_POST['nombreUser'])<=25){
-            $nombreUser = $_POST['nombreUser'];
+        if(strlen($_POST['inputNombre'])<=45){
+            $nombreUser = $_POST['inputNombre'];
         } else{
-            $erroresValidacion[] = "El nombre No Puede superar los 25 caracteres";
+            $erroresValidacion[] = "El nombre No Puede superar los 45 caracteres";
         }
 
-        if(strlen($_POST['apellidoUser'])<=25){
-            $apellidoUser = $_POST['apellidoUser'];
+        if(strlen($_POST['inputApellido'])<=50){
+            $apellidoUser = $_POST['inputApellido'];
         } else{
-            $erroresValidacion[] = "El Apellido No Puede superar los 25 caracteres";
+            $erroresValidacion[] = "El Apellido No Puede superar los 50 caracteres";
         }
 
-        if(strpos($_POST['emailUser'], '@')!=false && strpos($_POST['emailUser'], '.')!=false){
-            $emailUser = $_POST['emailUser'];
+        if(strpos($_POST['inputEmail'], '@')!=false && strpos($_POST['inputEmail'], '.')!=false){
+            $emailUser = $_POST['inputEmail'];
         } else{
             $erroresValidacion[] = "La dirección de correo ingresado NO ES VÁLIDO";
         }

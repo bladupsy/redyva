@@ -127,7 +127,7 @@
                     </tbody>
                 </table>
                 <hr class="line">
-                <a class="btn btn-orange text-light rounded-pill pedido" href="formPedido" >confirmar pedido</a>
+                <a class="btn btn-orange text-light rounded-pill pedido" href="formPedido?bolson=1" >confirmar pedido</a>
             </div>
             </p>
         </div>
