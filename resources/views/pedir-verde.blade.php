@@ -121,7 +121,7 @@
                 <table>
                     <tbody>
                         <tr>
-                            <td class="separador-derecho">Llevas <b>1<br> bolsón pesado</b></td>
+                            <td class="separador-derecho">Llevas <b>1<br> Bolsón Verde</b></td>
                             <td class="precio">$300</td>
                         </tr>
 

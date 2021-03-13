@@ -94,6 +94,14 @@
             color: #878787 !important;
             margin-top: 80px;
         }
+
+        #impresiones {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: -0.03em;
+
+        }
     </style>
 </head>
 <body>
@@ -108,7 +116,7 @@
         <div class="card card-center mx-auto" style="width:  35rem;">
             <!--mx: margin igual -->
             <div class="card-body">
-                <h5 class="card-title">Tú bolsón: <input size="2" type="text" readonly id="bol" value="<?php echo $idbolson ?>"><b class="separador"> para el:</b> viernes </h5>
+                <h5 class="card-title">Tú bolsón es el: N° <input size="2" type="text" readonly id="bol" value="<?php echo $idbolson ?>"><b class="separador"> para el:</b> viernes </h5>
                 <hr class="line-one">
                 <div>
                 </div>
@@ -158,6 +166,7 @@
     <!--!!!! Aca Viene JavaScript (Jquery) !!!!-->
     <script>
         $(document).ready(function(){
+
             let seleccionado = 0;
             let deliveryUser = "domicilio";
 
@@ -212,12 +221,62 @@
                 console.log(deliveryUser);
             });
 
+            // Validar Fomulario si estan vacios
+                $('#inputNombre').focusout(function(){
+                    let inputN = $('#inputNombre').val();
+                    if(inputN == null || inputN.length == 0 || /^\s+$/.test(inputN)){
+                    $('#inputNombre').css("outline","2px solid red");
+                    $('#inputNombre').css("transition","outline .2s");
+                    } else{
+                    $('#inputNombre').css("outline","2px solid lightgreen");
+                    $('#inputNombre').css("transition","outline .2s");
+                    }
+                });
+                
+                $('#inputApellido').focusout(function(){
+                    let inputA = $('#inputApellido').val();
+                    if(inputA == null || inputA.length == 0 || /^\s+$/.test(inputA)){
+                    $('#inputApellido').css("outline","2px solid red");
+                    $('#inputApellido').css("transition","outline .2s");
+                    } else{
+                    $('#inputApellido').css("outline","2px solid lightgreen");
+                    $('#inputApellido').css("transition","outline .2s");
+                    }
+                });
+                
+                $('#inputDireccion').focusout(function(){
+                    let inputD = $('#inputDireccion').val();
+                    if(inputD == null || inputD.length == 0 || /^\s+$/.test(inputD)){
+                    $('#inputDireccion').css("outline","2px solid red");
+                    $('#inputDireccion').css("transition","outline .2s");
+                    } else{
+                    $('#inputDireccion').css("outline","2px solid lightgreen");
+                    $('#inputDireccion').css("transition","outline .2s");
+                    }
+                });
+                
+                $('#inputEmail').focusout(function(){
+                    let inputE = $('#inputEmail').val();
+                    if(inputE == null || inputE.length == 0 || /^\s+$/.test(inputE)){
+                    $('#inputEmail').css("outline","2px solid red");
+                    $('#inputEmail').css("transition","outline .2s");
+                    }
+                    if(!(/^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i.test(inputE))){
+                    $('#inputEmail').css("outline","2px solid red");
+                    $('#inputEmail').css("transition","outline .2s");
+                    } else{
+                    $('#inputEmail').css("outline","2px solid lightgreen");
+                    $('#inputEmail').css("transition","outline .2s");
+                    }
+                });
+            
+            // Evento Boton
             $('#btnPedido').click(function(){
                 if(deliveryUser == "retirar" && seleccionado == ""){
                     alert("Debe Seleccionar una Sucursal");
                     location.reload();
                 }
-                
+                // Valores del Input
                 let inputNombre = $('#inputNombre').val();
                 let inputApellido = $('#inputApellido').val();
                 let inputEmail = $('#inputEmail').val();
@@ -227,50 +286,82 @@
                 let retirarUser = deliveryUser; // Variable Retirar o A domicilio
                 let sucursalUser = seleccionado; // Variable Sucursal Elegida
 
-                // Datos del PDF
-                var name = $('#inputNombre').val();
-                var lastname = $('#inputApellido').val(); 
-                var adress = $('#inputDireccion').val(); 
-                var email = $('#inputEmail').val();
-                var bag = variableBolson;
-                var sucursalname = sucursalUser;
+                // Variables Bandera
+                let validarNombre;
+                let validarApellido;
+                let validarDireccion;
+                let validarEmail;
+                
+                // Validacion formularios antes de enviar
+                if(inputNombre == null || inputNombre.length == 0 || /^\s+$/.test(inputNombre)){
+                    $('#inputNombre').css("outline","3px solid red");
+                    validarNombre = false;
+                } else{validarNombre = true}
+                
+                if(inputApellido == null || inputApellido.length == 0 || /^\s+$/.test(inputApellido)){
+                    $('#inputApellido').css("outline","3px solid red");
+                    validarApellido = false;
+                } else{validarApellido = true}
+                
+                if(inputDireccion == null || inputDireccion.length == 0 || /^\s+$/.test(inputDireccion)){
+                    $('#inputDireccion').css("outline","3px solid red");
+                    validarDireccion = false;
+                } else{validarDireccion = true}              
 
-                // Limpio el formulario
-                $('#inputNombre').val("");
-                $('#inputApellido').val("");
-                $('#inputEmail').val("");
-                $('#inputDireccion').val("");
-                $('#div-vacio').empty();
-                $('#dom').attr('checked', true);
-                $.ajax({
-                    url: 'pedido',
-                    type: 'POST',
-                    data: {
-                        inputNombre : inputNombre,
-                        inputApellido : inputApellido,
-                        inputEmail : inputEmail,
-                        inputDireccion : inputDireccion,
-                        variableBolson : variableBolson,
-                        retirarUser : retirarUser,
-                        sucursalUser : sucursalUser
-                    },
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    success : function(response){
-                        $("#div-vacio").append(function(){
+                if(!(/^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i.test(inputEmail))) {
+                    $('#inputEmail').css("outline","3px solid red");
+                    validarEmail = false;
+                } else{validarEmail = true}
 
-                            enlacePdf = `<a target="_blank" id="impresiones" href="/comprobante?name=${name}&lastname=${lastname}&email=${email}&adress=${adress}&bag=${bag}&sucursalname=${sucursalname}">Generar PDF</a>`;
-                            $('#impresiones').click(function(){
-                                $("#div-vacio").empty();
-                            });
-                            return enlacePdf;
-                        })
-                    },
-                    error : function(){
-                        alert('Se produjo un error en el Servidor, vuelva a Intentarlo más tarde ');
-                    }
-                })
+                // Si las validaciones son TRUE, se ejecuta el AJAX
+                if(validarNombre == true && validarApellido == true && validarDireccion == true && validarEmail == true){
+                    // Datos del PDF
+                    var name = $('#inputNombre').val();
+                    var lastname = $('#inputApellido').val(); 
+                    var adress = $('#inputDireccion').val(); 
+                    var email = $('#inputEmail').val();
+                    var bag = variableBolson;
+                    var sucursalname = sucursalUser;
+
+                    // Limpio el formulario
+                    $('#inputNombre').val("");
+                    $('#inputApellido').val("");
+                    $('#inputEmail').val("");
+                    $('#inputDireccion').val("");
+                    $('#div-vacio').empty();
+                    $('#dom').attr('checked', true);
+
+                    // Ajax
+                    $.ajax({
+                        url: 'pedido',
+                        type: 'POST',
+                        data: {
+                            inputNombre : inputNombre,
+                            inputApellido : inputApellido,
+                            inputEmail : inputEmail,
+                            inputDireccion : inputDireccion,
+                            variableBolson : variableBolson,
+                            retirarUser : retirarUser,
+                            sucursalUser : sucursalUser
+                        },
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        success : function(response){
+                            $("#div-vacio").append(function(){
+
+                                enlacePdf = `<a target="_blank" id="impresiones" href="/comprobante?name=${name}&lastname=${lastname}&email=${email}&adress=${adress}&bag=${bag}&sucursalname=${sucursalname}">Generar PDF</a>`;
+                                $('#impresiones').click(function(){
+                                    $("#div-vacio").empty();
+                                });
+                                return enlacePdf;
+                            })
+                        },
+                        error : function(){
+                            alert('Se produjo un error en el Servidor, vuelva a Intentarlo más tarde ');
+                        }
+                    })
+                } else{alert("Un campo del formulario contiene un error")}
             }) //ok  
         }) //ok
     </script>
