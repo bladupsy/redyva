@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactoController;
+use App\Http\Controllers\PdfController;
 use App\Http\Controllers\PedidosController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,7 +39,7 @@ Route::get('/pedir-pesado', [App\Http\Controllers\NavegacionController::class, '
 Route::get('/pedir-citrus', [App\Http\Controllers\NavegacionController::class, 'pedirCitrus']);
 Route::get('/pedir-verde', [App\Http\Controllers\NavegacionController::class, 'pedirVerde']);
 Route::get('/formPedido', [App\Http\Controllers\NavegacionController::class, 'formPedido']);
-Route::get('/comprobante', [App\Http\Controllers\PdfController::class, 'pdfGenerate']);
+Route::get('pdf', [App\Http\Controllers\PdfController::class, 'generarPdf']);
 
 //Rutas del fomulario
 Route::get('/formulario', function () {

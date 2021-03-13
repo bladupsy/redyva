@@ -350,7 +350,7 @@
                         success : function(response){
                             $("#div-vacio").append(function(){
 
-                                enlacePdf = `<a target="_blank" id="impresiones" href="/comprobante?name=${name}&lastname=${lastname}&email=${email}&adress=${adress}&bag=${bag}&sucursalname=${sucursalname}">Generar PDF</a>`;
+                                enlacePdf = `<a target="_blank" id="impresiones" href="/pdf?name=${name}&lastname=${lastname}&adress=${adress}&bag=${bag}&sucursalname=${sucursalname}">Generar PDF</a>`;
                                 $('#impresiones').click(function(){
                                     $("#div-vacio").empty();
                                 });
