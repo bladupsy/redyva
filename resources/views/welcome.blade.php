@@ -63,7 +63,7 @@
         <a class="btn btn-light text-orange btn-lg  rounded-pill " href="index">proyecto</a>
       </div>
       <div class="col-lg-2">
-        <p><strong>Integrantes</strong><br>Darío Javier Piñeyro <br>Gisela A. Cristaldo<br>Lucas Daniel Corbalán<br>Juan Nahuel Beck</p>
+        <p><strong>Integrantes</strong><br>Darío Javier Piñeyro <br>Gisela A. Cristaldo<br>Juan Nahuel Beck</p>
       </div>
     </div>
   </article>

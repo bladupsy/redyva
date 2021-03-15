@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/formularioDePedido', function(){
+Route::get('/formularioDePedido', function () {
     return view('formPedido');
 });
 
@@ -46,7 +46,9 @@ Route::get('/formulario', function () {
     return view('formulario');
 });
 
+//Rutas de Dahsboard
+
 //Ruta de Administrador
-Route::get('/admin', function () {
-    return view('admin');
+Route::get('/dashboard', function () {
+    return view('dashboard');
 });

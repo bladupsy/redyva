@@ -6,55 +6,67 @@ use Illuminate\Http\Request;
 
 class NavegacionController extends Controller
 {
-    function quienes(){
+    function quienes()
+    {
         return view('quienes');
     }
 
-    function hacen(){
+    function hacen()
+    {
         return view('hacen');
     }
 
-    function puntos(){
+    function puntos()
+    {
         return view('puntos');
     }
 
-    function producto(){
+    function producto()
+    {
         return view('producto');
     }
 
-    function bolson(){
+    function bolson()
+    {
         return view('bolson');
     }
 
-    function index(){
+    function index()
+    {
         return view('index');
     }
 
-    function pesado(){
+    function pesado()
+    {
         return view('pesado');
     }
 
-    function citrus(){
+    function citrus()
+    {
         return view('citrus');
     }
 
-    function verde(){
+    function verde()
+    {
         return view('verde');
     }
 
-    function pedirPesado(){
+    function pedirPesado()
+    {
         return view('pedir-pesado');
     }
 
-    function pedirCitrus(){
+    function pedirCitrus()
+    {
         return view('pedir-citrus');
     }
-    
-    function pedirVerde(){
+
+    function pedirVerde()
+    {
         return view('pedir-verde');
     }
-    function formPedido(){
+    function formPedido()
+    {
         return view(' formPedido');
     }
-
 }
