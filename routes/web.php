@@ -52,3 +52,6 @@ Route::get('/formulario', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+Route::get('/lista-pedidos', function () {
+    return view('lista-pedidos');
+});

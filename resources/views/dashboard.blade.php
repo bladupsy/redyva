@@ -51,7 +51,7 @@
             </div>
             <div class="col">
                 <div class="card" style="width: 18rem;">
-                    <img src="{{ asset('img/berenjena.jpg') }}" class="card-img-top" alt="...">
+                    <img src="{{ asset('img/potato.jpg') }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Lista de pedidos</h5>
                         <p class="card-text">Bolson pesado.</p>
