@@ -23,7 +23,9 @@ class AdminModel extends Model
 
     function contarRegistros($identificador){
         
-        $cantidadTotal = DB::table('pedidos')->where('id_bolson', $identificador)->count();
+        $cantidadTotal = DB::table('pedidos')->select(DB::raw('count(*) as idpedidos'))
+                                             ->where('id_bolson', $identificador)
+                                             ->get();
         return $cantidadTotal;
     }
 }

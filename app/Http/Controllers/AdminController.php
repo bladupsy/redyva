@@ -23,10 +23,12 @@ class AdminController extends Controller
 
         // Traigo datos para hacer las consultas
         $identificador = $_GET['id'];
-        $paginaNumero = isset($_GET['paginaNumero']);
+        $paginaNum = $_GET['paginaNumero'];
+        $paginaNumero = (int)$paginaNum;
+        $maximo = isset($_GET['max']);
+
         $cantMax = 10;
         $offset = ($paginaNumero - 1) * $cantMax ;
-        
         $adminQuery = new AdminModel();
         $consulta = $adminQuery->buscarRegistro($identificador, $cantMax, $offset);
 
@@ -39,11 +41,8 @@ class AdminController extends Controller
 
          // Instancio Modal para ejecturar el metodo contar
          $cantidadTotal = new AdminModel();
-         $registrosTotal = $cantidadTotal->contarRegistros($identificador);
-
-         $cantMax = 10;
-         $totalPaginas = ceil($registrosTotal/$cantMax);
-
-         return $totalPaginas;
+         $registros = $cantidadTotal->contarRegistros($identificador);
+        
+         return $registros;
     }
 }

@@ -42,23 +42,15 @@
                     <th scope="col">Sucursal</th>
                     <th scope="col">Bolson</th>
                     <th scope="col">Forma</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                </tr>
+            <tbody id="datos">
+                
             </tbody>
         </table>
         <div>
-        <div><p>Cantidad de Páginas: <b id="valorCantidad"></b></p></div>
+        <div><p>Páginas: </p> <input readonly size="2" id="valorpagina" value=""> de <input readonly size="2" id="valorCantidad" value=""></p></div>
         <ul id="paginar">
             <li><a id="idFirst" href="#">Primera Página</a></li>
             <li><a id="idAnterior" href="#">Anterior</a></li>
@@ -74,28 +66,13 @@
     <script>
     $(document).ready(function(){
         let id = $('#identificador').val();
-        let paginaNumero = $('#paginaNumero').val();
-        console.log(id);
-        console.log(paginaNumero);
-
-        $.ajax({
-            url: 'listarExistencias',
-            type: 'GET',
-            data: {
-                id: id,
-                paginaNumero : paginaNumero
-            },
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-            success: function(response){
-                console.log(response);
-            },
-            error: function(){
-                alert("Ha sucedido un error intentelo de nuevo");
-            }
-        })
-
+        let paginaString = $('#paginaNumero').val();
+        // lo paso de string a number
+        let pagina = parseInt(paginaString); 
+        var registrosTotal;
+        var totalPaginas;
+        const cantMax = 10;
+        // Consigue la cantidad de registros que tiene la tabla
         $.ajax({
             url: 'cantidad',
             type: 'GET',
@@ -106,17 +83,104 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function(response){
-                $('#valorCantidad').val(response);
+                $.each(response, function(index, value){
+                    $('#valorCantidad').val(`${value.idpedidos}`);
+                });
+                console.log($('#valorCantidad').val());
+                console.log(typeof($('#valorCantidad').val()));
+
+                let cantidadTotal = $('#valorCantidad').val();
+                registrosTotal = parseInt(cantidadTotal);
+                totalPaginas = Math.ceil(registrosTotal/cantMax);
+                $('#valorCantidad').val(totalPaginas);
             },
             error: function(){
                 $('#valorCantidad').val("Error");
             }
-        })
-        
-        $('#idFirst').click(function(){
-            paginaNumero = parseInt(paginaNumero) + 1;
-        })
+        });
 
+        // Funcion que Muestra la pagina 1 de Datos en la Tabla
+        const tabla = function(para1, para2, para3){
+            let id = para1;
+            var paginaNumero = para2;
+            let max = para3;
+            $('#datos').empty();
+            $.ajax({
+                url: 'listarExistencias',
+                type: 'GET',
+                data: {
+                    id: id,
+                    paginaNumero : paginaNumero,
+                    max : max 
+                },
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                success: function(response){
+                    console.log(response);
+                    $.each(response, function(index, value){
+                        $('#datos').append(`
+                        <tr>
+                            <th scope="row">${value.idpedidos}</th>
+                            <td>${value.nombre}</td>
+                            <td>${value.apellido}</td>
+                            <td>${value.email}</td>
+                            <td>${value.direccion}</td>
+                            <td>${value.id_sucursal}</td>
+                            <td>${value.id_bolson}</td>
+                            <td>${value.aDomicilio}</td>
+                            <td> <a href="#">✐</a></td>
+                        </tr>
+                        `)
+                    })
+                },
+                error: function(){
+                    alert("Ha sucedido un error intentelo de nuevo");
+                }
+            })
+        }
+
+        // Muestro los datos ejectuando la funcion
+        tabla(id, pagina, totalPaginas);
+        $('#valorpagina').val(pagina);
+
+        // Ejecuta la funcion de Mostrar la pagina 1
+        $('#idFirst').click(function(){
+            pagina = 1;
+            $('#datos').empty();
+            tabla(id, pagina, totalPaginas);
+            console.log(pagina);
+            $('#valorpagina').val(pagina);
+        });
+
+        $('#idAnterior').click(function(){
+            if(pagina > 1){
+                $('#datos').empty();    
+                pagina -= 1;
+                tabla(id, pagina, totalPaginas);
+                console.log(pagina);
+                $('#valorpagina').val(pagina);
+            }
+        });
+
+        $('#idSiguiente').click(function(){
+
+            if(pagina < totalPaginas){
+                $('#datos').empty();
+                pagina += 1;
+                tabla(id, pagina, totalPaginas);
+                console.log(pagina);
+                $('#valorpagina').val(pagina);
+            }
+        });
+        
+        $('#idLast').click(function(){
+            pagina = totalPaginas;
+            $('#datos').empty();
+            tabla(id, pagina, totalPaginas);
+            console.log(pagina);
+            $('#valorpagina').val(pagina);
+        });
     })
 
     </script>

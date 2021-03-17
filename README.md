@@ -78,7 +78,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
   La página ofrece 3 tipos de bolsones, PESADO, CITRUS y VERDE, cada uno con sus respectivos precios y sus respectivos productos. Dandole la oportunidad al cliente a seleccionar un bolsón y realizar el pedido, en el cual especifica la sucursal a retirar sus productos (El cual solo se reparten cada viernes del mes), al retirarlo o al llevarselo a su dimicilio deberá mostrar su comprobante y pagar por sus productos.
 
-## Sección Frontend realizada por Gise
+## Front-end
 
   Para utilzar bootstrap he instalado atraves de composer los paquetes:
   Instalación paquete Laravel/ui
@@ -132,7 +132,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
   de la siguiente manera:    
 
 <pre><code> <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> </code></pre>
-
 
 ## Back-End
 
@@ -197,6 +196,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
   - apellido Varchar(50);
   - email Varchar(100);
   - direccion Varchar(100);
+  - aDomicilio Varchar(45);
   - id_bolson (FK) Int(200) Default(1);
   - id_sucursal (FK) Int(200) Default(1).
   ------------------------------------------------------------------
