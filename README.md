@@ -61,79 +61,173 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
+## Proyecto RedYvá
+
+  RedYvá es un sistema de gestión y pedidos para conectar pequeños productores y clientes potenciales. Nuestro objetivo fue sistematizar un sistema de ventas y facilitar a los productores que puedan vender sus bolsones, conectandolos directamente con los usuarios, haciendo que estos puedan solicitar sus bolsones a domicilio o retirarlos en sus respectivas sucursales.
+
+  Para lograrlo se crearon las páginas dentro del framework Laravel. Se basa en el MVC con cliente liviano, el back-end genera las vistas. Donde cada modulo es independiente de las demas partes, pero interconectadas.
+  Utilizando: Xammp y Workbench para la realizacion de la base de datos relacional (SQL). Laravel para el Back-end junto con libreria de generacion de PDF(DOMPdf). Html5, CSS3, Javascript más las librerías Bootstrap, Jquery y AJAX, Leaflet para el Front-end.
+
+* Alcance:
+
+  Para lograr realizarlo se diseñó toda la interfaz mediante Figma y se le dió interactividad con Bootstrap y Jquery. Tenemos como objetivo faciliar a los usuarios realizar pedidos, y para ellos a futuro se planea introducir una funcionalidad de Login y Registro de usuarios para evitar que cada vez que el cliente necesite pedir un Bolson tenga que rellenar el formulario una y otra vez. Este contaría con la opcin de agregar y modificar sus datos dentro de su cuenta. Además una seccion especial para administradores, y que estos puedan gestionar los datos y visualizar la base de datos. Pero lo primero y principal es poner en funcionamiento un producto mínimo viable que pueda como minimo insertar Pedidos en la DB, y que estos puedan visualizarse.
+  
+  Todo esto es a lo que apuntamos como objetivo, intentando incrementar la complejidad poco a poco agregando y mejorando todo el sitio. 
+
+  Tiene la modularización suficiente para agregar funcionalidades a futuro sin modificar ni perjudicar el funcionamiento del front-end, del back-end y de la database. Asegurando poder seguir incrementando la complejidad del proyecto. Está pensado para agregar un sistema de Login para los administradores.
+
+  La página ofrece 3 tipos de bolsones, PESADO, CITRUS y VERDE, cada uno con sus respectivos precios y sus respectivos productos. Dandole la oportunidad al cliente a seleccionar un bolsón y realizar el pedido, en el cual especifica la sucursal a retirar sus productos (El cual solo se reparten cada viernes del mes), al retirarlo o al llevarselo a su dimicilio deberá mostrar su comprobante y pagar por sus productos.
+
 ## Sección Frontend realizada por Gise
 
-Para utilzar bootstrap he instalado atraves de composer los paquetes:
-Instalación paquete Laravel/ui
-composer require laravel/ui
-Después de instalar el paquete anterior, estamos listos para instalar Boostrap 4 en nuestro proyecto.
+  Para utilzar bootstrap he instalado atraves de composer los paquetes:
+  Instalación paquete Laravel/ui
+  composer require laravel/ui
+  Después de instalar el paquete anterior, estamos listos para instalar Boostrap 4 en nuestro proyecto.
 
-Instalación Boostrap 4:
+## Instalación Boostrap 4:
 
-<pre><code>php artisan ui bootstrap</code></pre>
+  <pre><code>php artisan ui bootstrap</code></pre>
 
-Recurso obtenido en [Codersfree](https://codersfree.com/blog/como-instalar-bootstrap-4-en-tu-proyecto-laravel-7).
+  Recurso obtenido en [Codersfree](https://codersfree.com/blog/como-instalar-bootstrap-4-en-tu-proyecto-laravel-7).
 
-Sino en cambio lo podemos instalar a traves de Composer Bootstrap 5
+  Sino en cambio lo podemos instalar a traves de Composer Bootstrap 5
 
-<pre><code>composer require twbs/bootstrap:5.0.0-beta2 </code></pre>
+  <pre><code>composer require twbs/bootstrap:5.0.0-beta2 </code></pre>
 
-Para instalar los iconos de Bootstrap 5
+  Para instalar los iconos de Bootstrap 5
 
-<pre><code>npm i bootstrap-icons</code></pre>
+  <pre><code>npm i bootstrap-icons</code></pre>
 
-Para poder instalar todas las dependencias que necesitamos, debemos instalar npm en nuestro proyecto (para instalar npm debemos tener instalado Node Js en nuestra computadora):
-Instalación npm
+  Para poder instalar todas las dependencias que necesitamos, debemos instalar npm en nuestro proyecto (para instalar npm debemos tener instalado Node Js en nuestra computadora):
+  Instalación npm
 
- <pre><code> npm install </code></pre>
+  <pre><code> npm install </code></pre>
 
-Compilar nuestros archivos
+  Compilar nuestros archivos
 
-  <pre><code>npm run dev</code></pre>
+    <pre><code>npm run dev</code></pre>
 
-Listo, ya tenemos nuestros archivos js y css listo para utilizar.
+  Listo, ya tenemos nuestros archivos js y css listo para utilizar.
 
-Para poder usarlos debemos escribir en el head de nuestra plantilla lo siguiente:
+  Para poder usarlos debemos escribir en el head de nuestra plantilla lo siguiente:
 
-<link rel="stylesheet" href="{{asset('css/app.css')}}">
+  <link rel="stylesheet" href="{{asset('css/app.css')}}">
 
-Y justo antes de finalizar el body lo siguiente:
+  Y justo antes de finalizar el body lo siguiente:
 
-<script src="{{asset('js/app.js')}}"></script>
+  <script src="{{asset('js/app.js')}}"></script>
 
 ## Instale Leaflet
 
-Através de npm con el siguiente comando
+  Através de npm con el siguiente comando
 
- <pre><code>npm install leaflet</code><pre>
+  <pre><code>npm install leaflet</code><pre>
+
+## Jquery
+
+  Se utilizó Jquery como librería de Javascript para interactuar con el DOM de las páginas, pero principalmente para que, mediante AJAX, las vistas puedan enviar datos al Back-end y poder actualizar y mostrar datos asincronicamente en la misma página sin necesidad de recargar.
+
+  Se utilizó el CDN de jquery, y se lo puede ver al inicio de cada código Html dentro del <head>
+  de la siguiente manera:    
+
+<pre><code> <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> </code></pre>
 
 
+## Back-End
 
-## Dependencias DOMPDF para generar archivo pdf
+  En esta parte solamente se utilizó PHP con el framework Laravel, donde se codearon todas las rutas de acceso, asi como los controladores y los modelos para acceder a la base de datos
 
-// Hay que colocarle target="_blank" como atributo en el HTML
+  En Laravel, se utilizan los siguientes Controladores donde se reciben los datos y se procesan para hacer generar las consultas a la DB: 
+  - PedidosController:Se encarga de recibir datos del Front-End y tratarlos, para luego enviarlos por medio de un método del Modelo (PedidosModel) y agregar en los registros el pedido del producto enviado por el usuario.
+  - PdfController: Se encarga de recibir los datos del usuario mediante AJAX y poder generar un PDF descargable que funcionará como comprobante del pedido solicitado por dicho usuario.
+  - NavegacionController: Se encarga de redireccionar a sus respectivas vistas, permitiendo la navegación en la página.
+  - AdminController: Tiene como objetivo capturar los datos de los últimos pedidos de la base de datos y mostrarlos en una tabla, permitiendo al administrador acceder a ellos y mmodificarlos. En el futuro contendría tambien la lógica para el funcionamiento de un sistema de Login.
 
-Poner los siguientes comandos:
-<pre><code>composer require barryvdh/laravel-dompdf</code></pre>
+## DOMPdf - Librería Dependencias DOMPDF para generar archivo pdf
 
-En config /app.php poner en "Providers" este codigo:
+  - Hay que colocarle target="_blank" como atributo en el HTML
 
--   Barryvdh\DomPDF\ServiceProvider::class,
+  Poner los siguientes comandos:
+  <pre><code>composer require barryvdh/laravel-dompdf</code></pre>
 
-y en "aliases" el otro:
+  En config /app.php poner en "Providers" este codigo:
 
--   'PDF' => Barryvdh\DomPDF\Facade::class,
+  -   Barryvdh\DomPDF\ServiceProvider::class,
 
-Luego:
+  y en "aliases" el otro:
 
-<pre><code>php artisan vendor:publish</code></pre> (el 1 o todos)
+  -   'PDF' => Barryvdh\DomPDF\Facade::class,
 
-En el controllador usado va:
+  Luego:
 
--   use Barryvdh\DomPDF\Facade as PDF;
+  <pre><code>php artisan vendor:publish</code></pre> (el 1 o todos)
 
-Limpiar cache :
+  En el controllador usado va:
 
-<pre><code>php artisan cache:clear</code></pre>
+  -   use Barryvdh\DomPDF\Facade as PDF;
 
-Cerrar el servidor, el Visual Code, y volverlo a abrir.
+  Limpiar cache :
+
+  <pre><code>php artisan cache:clear</code></pre>
+
+  Cerrar el servidor, el Visual Code, y volverlo a abrir.
+
+  Utilizar:
+
+  <pre><code>composer install</code></pre>
+
+  Para actualizar todas las librerías necesarias en el proyecto de Laravel.
+
+## Base de Datos
+
+  Para la gestión Base de Datos (DB), se utilizó Workbench, donde se crearon un 
+  usuario: "root"
+  contraseña: ""
+
+  Una Schema llamado 'Pedidos', las demás especificaciones siguen a continuación:
+
+  La base de Datos nombrada: 'pedidos' (configurada con UTF8 - utf_spanish2_ci), contiene 5 tablas llamadas: pedidos, productos, bolsones, sucursales, email.
+
+  Tablas:
+  ------------------------------------------------------------------
+  * pedidos: 
+  - 'idpedidos' (PK) INT(100) Not Null Autoincremental; 
+  - nombre Varchar(45);
+  - apellido Varchar(50);
+  - email Varchar(100);
+  - direccion Varchar(100);
+  - id_bolson (FK) Int(200) Default(1);
+  - id_sucursal (FK) Int(200) Default(1).
+  ------------------------------------------------------------------
+  * productos:
+  - codproductos (PK) Int(100) NotNull Autoincremental;
+  - nombre_productos Varchar(45);
+  - idbolson (FK) Int(200).
+  ------------------------------------------------------------------
+  * bolsones:
+  - idbolsones (Pk) Int(100) Not Null;
+  - nombre_bolson Varchar(45).
+  ------------------------------------------------------------------
+  * sucursales:
+  - idsucursales (PK) Int(200) Not Null;
+  - direccion_sucursal Varchar(100);
+  ------------------------------------------------------------------
+  * email:
+  - idemail (PK) Int(100) Not Null AutoIncremental;
+  - correo Varchar(50);
+  - mensaje  Varchar(100);
+  - nombre  Varchar(45)
+
+  Se utilizó para enlazar las tablas unas Foreign Keys en la tabla 'pedidos', vinculandolas con los id's de las tablas 'sucursales' y 'bolsones'. Así como una Foreign Key vinculando la tabla 'productos' con la tabla 'bolsones', donde cada producto contiene sus respectivos bolsones.
+
+## Instalación
+
+  Para poder poner en funcionamiento el proyecto, solo se necesitan tener 3 cosas principales:
+  - Instalar Composer y Laravel.
+  - Tener Visual Studio Code como IDE.
+  - Crear la Base de Datos, para ello XAMMP y WORKBENCH (MySQL).
+
+  Lo demás se lo puede descargar o clonar del repositorio de GitHub.
+
+  Arriba en la parte de Front y Back end se detallan las dependencias y librerias utilizadas y como instalarlas y/o utilizar su CDN.

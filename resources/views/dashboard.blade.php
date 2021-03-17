@@ -35,7 +35,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Lista de pedido</h5>
                         <p class="card-text">Bolson citrus.</p>
-                        <a href="#" class="btn btn-outline-orange rounded-pill">Ir a la lista</a>
+                        <a href="/lista-pedidos?identificador=2&pag=1" class="btn btn-outline-orange rounded-pill">Ir a la lista</a>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Lista de pedidos</h5>
                         <p class="card-text">Bolson verde.</p>
-                        <a href="#" class="btn btn-outline-success rounded-pill">Ir a la lista</a>
+                        <a href="/lista-pedidos?identificador=3&pag=1" class="btn btn-outline-success rounded-pill">Ir a la lista</a>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Lista de pedidos</h5>
                         <p class="card-text">Bolson pesado.</p>
-                        <a href="#" class="btn btn-outline-orange rounded-pill">Ir a la lista</a>
+                        <a href="/lista-pedidos?identificador=1&pag=1" class="btn btn-outline-orange rounded-pill">Ir a la lista</a>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\PdfController;
 use App\Http\Controllers\PedidosController;
@@ -49,9 +50,7 @@ Route::get('/formulario', function () {
 //Rutas de Dahsboard
 
 //Ruta de Administrador
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-Route::get('/lista-pedidos', function () {
-    return view('lista-pedidos');
-});
+Route::get('/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard']);
+Route::get('/lista-pedidos', [App\Http\Controllers\AdminController::class, 'listaPedidos']);
+Route::get('/listarExistencias', [App\Http\Controllers\AdminController::class, 'listar']);
+Route::get('/cantidad', [App\Http\Controllers\AdminController::class, 'cantidad']);
