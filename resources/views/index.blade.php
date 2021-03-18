@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}" type="text/css">
     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
     <title>Redyva</title>
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
+        }
 
-
+        #iconoFecha{
+            color: #e94d1a;
         }
 
         .fondo-inicio {
@@ -178,6 +181,18 @@
         .grupo-botones {
             margin-left: 60px;
         }
+
+        #linkPuntos{
+            margin-bottom: 15px;
+            margin-left: -20px;
+            font-weight: bold;
+        }
+
+        .linkVarios:hover{
+            transition: .4s;
+            text-decoration: none;
+            font-size: 40px;
+        }
         
     </style>
 </head>
@@ -242,12 +257,12 @@
     <article class="container-fluid naranja">
         <div class="container-sm">
             <hr class="line">
-            <a class="etiqueta">desde el 2020</a>
+            <a class="etiqueta linkVarios">desde el 2020</a>
 
             <p class="texto text-light">Nos encontramos organizaciones <br>sociales, cooperativas productivas,<br> trabajadores y trabajadoras del agro, todos bajo la consigna de proveer alimentos sanos.</p>
             <div class="conoce">
                 <hr class="line">
-                <a class="etiqueta" href="hacen">conoce más</a>
+                <a class="etiqueta linkVarios" href="hacen">conoce más</a>
             </div>
 
         </div>
@@ -258,9 +273,9 @@
     <article class="container-sm map">
         <div class="container-sm row justify-content-between pizzarra mx-auto">
             <div class="col-4"><br><br><br>
-                <a type="button" class="btn btn-outline-orange rounded-pill" href="puntos">Áca podés encontrar los <br> puntos de distribución</a>
+                <a id="linkPuntos" type="button" class="btn btn-outline-orange rounded-pill" href="puntos">Áca podés encontrar los <br> puntos de distribución</a>
                 <br>
-                <p class="text-orange"><strong>>Posadas</strong></p>
+                <p class="text-orange"><strong><i id="iconoFlecha" class="fas fa-angle-right"></i> Posadas</strong></p>
             </div>
             <div class="col-4 "><img src="{{ asset('img/pizzarra.png') }}" width="156px" height="156px" style="margin-left: 130px;"></div>
         </div>

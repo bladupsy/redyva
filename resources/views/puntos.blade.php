@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="{{asset('css/app.css')}}" type="text/css">
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <title>Redyva</title>
   <style>
     .nav {
@@ -29,6 +30,16 @@
       line-height: 43px;
       letter-spacing: 0em;
       text-align: left;
+    }
+
+    #subtitle{
+      background-color: #e94d1a;
+      color: #fbf6fb;
+      padding: 5px;
+    }
+
+    i{
+      color: #e94d1a;
     }
 
     #distribucion {
@@ -71,43 +82,43 @@
     </div>
   </nav>
   <article class="container-sm" id="distribucion">
-    <h3>Éstos son los puntos donde <br>podés retirar los bolsones<h3><br><br>
+    <h3 id="subtitle">Éstos son los puntos donde <br>podés retirar los bolsones<h3><br><br>
         <div class="row align-items-center">
           <div class="col" id="col">
-            B° Villla Urquiza (calle Herrera casi Cabred) Asociación Civil Operación Rescate - &nbsp;Yasmín 3764385245<br><br>
-            Sede central del frente PATRIA (Av Tierra del Fuego 1637, entre Rademacher y López Torres) - Anto 3764139629<br><br>
-            B° Aeroclub (calle 160 entre 117 y 121 - casa 5810) Comisión Vecinal - CTD Aníbal Verón Nacional - Gonzalo 3764868310 ó Ceci 3764889227<br><br>
-            B° El Progreso (Cabildo y Mocona 2575) CTD Aníbal Verón Nacional - Chocha 3764280675<br><br>
-            B° Néstor Kirchner (MZ «J» casa 11) CTD Aníbal Verón Nacional - Anita 3764315820<br>
+          <i class="fas fa-angle-right"></i> B° Villla Urquiza (calle Herrera casi Cabred) Asociación Civil Operación Rescate / &nbsp;Yasmín 3764385245<br><br>
+          <i class="fas fa-angle-right"></i> Sede central del frente PATRIA (Av Tierra del Fuego 1637, entre Rademacher y López Torres) / Anto 3764139629<br><br>
+          <i class="fas fa-angle-right"></i> B° Aeroclub (calle 160 entre 117 y 121 / casa 5810) Comisión Vecinal / CTD Aníbal Verón Nacional / Gonzalo 3764868310 ó Ceci 3764889227<br><br>
+          <i class="fas fa-angle-right"></i> B° El Progreso (Cabildo y Mocona 2575) CTD Aníbal Verón Nacional - Chocha 3764280675<br><br>
+          <i class="fas fa-angle-right"></i> B° Néstor Kirchner (MZ «J» casa 11) CTD Aníbal Verón Nacional / Anita 3764315820<br>
 
           </div>
           <div class="col" id="col">
-            B° Vecinos Unidos (Calle 160 y Costanera Sur) Movimiento 13 de Diciembre - Joselo 3764347758<br><br>
+          <i class="fas fa-angle-right"></i> B° Vecinos Unidos (Calle 160 y Costanera Sur) Movimiento 13 de Diciembre / Joselo 3764347758<br><br>
 
-            B° San Lucas (Calle 75C Domingo Mateu 8136) CTD Aníbal Verón Nacional - Nora 3764617018 ó Patricia 3764666661<br><br>
+          <i class="fas fa-angle-right"></i> B° San Lucas (Calle 75C Domingo Mateu 8136) CTD Aníbal Verón Nacional / Nora 3764617018 ó Patricia 3764666661<br><br>
 
-            B° El Porvenir II (MZ «B» lote 3)
+          <i class="fas fa-angle-right"></i> B° El Porvenir II (MZ «B» lote 3)
             CTD Aníbal Verón Nacional
-            Iris 376686078 ó Marianela 3765128412<br><br>
-            B° San Isidro "A" (Mz 3 casa 16. Av Fangio) - Yanina 3765060978 <br>
+            <i class="fas fa-angle-right"></i> Iris 376686078 ó Marianela 3765128412<br><br>
+            <i class="fas fa-angle-right"></i> B° San Isidro "A" (Mz 3 casa 16. Av Fangio) / Yanina 3765060978 <br>
 
-            B° San Isidro "B" (Mz 10 casa 01)
+            <i class="fas fa-angle-right"></i> B° San Isidro "B" (Mz 10 casa 01)
             Erica 3764862545<br>
 
-            B° San Miguel (Av Tambor de Tacuarí y Av 115) - Diego Díaz 3764513605
+            <i class="fas fa-angle-right"></i> B° San Miguel (Av Tambor de Tacuarí y Av 115) / Diego Díaz 3764513605
           </div>
           <div class="col" id="col">
-            Centro (Rioja 1766 - entre Buenos Aires y Félix de Azara) Tupac Amaru Misiones - José Hierro 3764842609<br><br>
+          <i class="fas fa-angle-right"></i> Centro (Rioja 1766 / entre Buenos Aires y Félix de Azara) Tupac Amaru Misiones / José Hierro 3764842609<br><br>
 
-            B° Yacyreta (Av Blas Parera 5584) Sindic. de Trabajadores Pasivos - María 3764505897<br><br>
+          <i class="fas fa-angle-right"></i> B° Yacyreta (Av Blas Parera 5584) Sindic. de Trabajadores Pasivos / María 3764505897<br><br>
 
-            Villa Sarita (Bajada Vieja 1504)
-            ARTEFÍMERA - Cristian Krieger 3764325505<br><br>
+          <i class="fas fa-angle-right"></i> Villa Sarita (Bajada Vieja 1504)
+            ARTEFÍMERA / Cristian Krieger 3764325505<br><br>
 
-            B° 508 - Itaembé Guazú
+            <i class="fas fa-angle-right"></i> B° 508 / Itaembé Guazú
             Rocío Peralta, calle Cocu 5000 (sector verde) 376 417-9915<br><br>
 
-            UDPM (Av. Corrientes 1461) - Adrián Duarte 3764335897<br>
+            <i class="fas fa-angle-right"></i> UDPM (Av. Corrientes 1461) / Adrián Duarte 3764335897<br>
             <hr style=" background-color:  #000000; ">
             <br>
             <strong>Posadas</strong>
