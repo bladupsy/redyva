@@ -54,3 +54,5 @@ Route::get('/dashboard', [App\Http\Controllers\AdminController::class, 'dashboar
 Route::get('/lista-pedidos', [App\Http\Controllers\AdminController::class, 'listaPedidos']);
 Route::get('/listarExistencias', [App\Http\Controllers\AdminController::class, 'listar']);
 Route::get('/cantidad', [App\Http\Controllers\AdminController::class, 'cantidad']);
+Route::get('/insertar', [App\Http\Controllers\AdminController::class, 'insertar']);
+Route::get('/editar', [App\Http\Controllers\AdminController::class, 'editar']);

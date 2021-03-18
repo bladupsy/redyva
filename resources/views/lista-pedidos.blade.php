@@ -129,7 +129,7 @@
                             <td>${value.id_sucursal}</td>
                             <td>${value.id_bolson}</td>
                             <td>${value.aDomicilio}</td>
-                            <td> <a href="#">✐</a></td>
+                            <td> <a href="/insertar?id=${value.idpedidos}&nombre=${value.nombre}&apellido=${value.apellido}&email=${value.email}&direccion=${value.direccion}&sucursal=${value.id_sucursal}&bolson=${value.id_bolson}&forma=${value.aDomicilio}">✐</a></td>
                         </tr>
                         `)
                     })

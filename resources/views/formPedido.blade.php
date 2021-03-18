@@ -115,16 +115,6 @@
         </div>
         <div class="card card-center mx-auto" style="width:  35rem;">
             <!--mx: margin igual -->
-            <div class="card-body">
-                <h5 class="card-title">Tú bolsón es el: N° <input size="2" type="text" readonly id="bol" value="<?php echo $idbolson ?>"><b class="separador"> para el:</b> viernes </h5>
-                <hr class="line-one">
-                <div>
-                </div>
-                <div class="">
-                    <h6 class="card-subtitle text-dark">Para terminar anotá tu nombre y un número
-                        de teléfono para comunicarnos</h6>
-                </div>
-            </div>
             <div class="formulario">
                 <form class="row g-3">
                     <div class="row ingreso">

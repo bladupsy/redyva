@@ -45,4 +45,42 @@ class AdminController extends Controller
         
          return $registros;
     }
+
+    // Devolver formulario editar
+    function insertar(){
+        $id= $_GET['id'];
+        $nombre= $_GET['nombre'];
+        $apellido= $_GET['apellido'];
+        $email= $_GET['email'];
+        $direccion= $_GET['direccion'];
+        $bolson= $_GET['bolson'];
+        $sucursal= $_GET['sucursal'];
+        $forma= $_GET['forma'];
+    
+        return view('editar')->with('id', $id)
+                            ->with('nombre', $nombre)
+                            ->with('apellido', $apellido)
+                            ->with('email', $email)
+                            ->with('direccion', $direccion)
+                            ->with('bolson', $bolson)
+                            ->with('sucursal', $sucursal)
+                            ->with('forma', $forma);
+    }
+    
+    // Editar pedido
+    function editar(){
+        $id = $_GET['id'];
+        $nombre = $_GET['nombre'];
+        $apellido = $_GET['apellido'];
+        $email = $_GET['email'];
+        $direccion = $_GET['direccion'];
+        $bolson = $_GET['bolson'];
+        $sucursal = $_GET['sucursal'];
+        $forma = $_GET['forma'];
+
+        $insertar = new AdminModel();
+        $insertar->editarRegistro($id, $nombre, $apellido, $email, $direccion, $bolson, $sucursal, $forma);
+
+        return $insertar;
+    }
 }

@@ -28,4 +28,18 @@ class AdminModel extends Model
                                              ->get();
         return $cantidadTotal;
     }
+
+    function editarRegistro($id, $nombre, $apellido, $email, $direccion, $bolson, $sucursal, $forma){
+        $registroEditado = DB::table('pedidos')->where('idpedidos', $id)->update([
+                        'nombre'=>$nombre,
+                        'apellido'=>$apellido,
+                        'email'=>$email,
+                        'direccion'=>$direccion,
+                        'id_bolson'=>$bolson,
+                        'id_sucursal'=>$sucursal,
+                        'aDomicilio'=>$forma
+                    ]);
+        
+        return $registroEditado;
+    }
 }
