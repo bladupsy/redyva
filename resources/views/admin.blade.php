@@ -8,23 +8,24 @@
     <title>Administrador Redyva</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
             font-family: sans-serif;
-            background: linear-gradient(to right, #b92b27, #1565c0)
+            background-image: url("{{ asset('img/chacra.png') }}");
+            background-size: cover;
+
+
         }
 
         .box {
             width: 500px;
-            padding: 40px;
+
             position: absolute;
-            top: 50%;
-            left: 50%;
-            background: #191919;
+            top: 25%;
+            left: 35%;
+            background: #fff;
             ;
             text-align: center;
             transition: 0.25s;
-            margin-top: 100px
+
         }
 
         .box input[type="text"],
@@ -44,7 +45,7 @@
         }
 
         .box h1 {
-            color: white;
+            color: #000;
             text-transform: uppercase;
             font-weight: 500
         }
@@ -52,7 +53,7 @@
         .box input[type="text"]:focus,
         .box input[type="password"]:focus {
             width: 300px;
-            border-color: #2ecc71
+            border-color: #2ecc71;
         }
 
         .box input[type="submit"] {
@@ -146,19 +147,17 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
+        <div class="">
+            <div class="">
                 <div class="card">
                     <form onsubmit="event.preventDefault()" class="box">
                         <h1>Login</h1>
-                        <p class="text-muted"> Please enter your login and password!</p> <input type="text" name="" placeholder="Username"> <input type="password" name="" placeholder="Password"> <a class="forgot text-muted" href="#">Forgot password?</a> <input type="submit" name="" value="Login" href="#">
-                        <div class="col-md-12">
-                            <ul class="social-network social-circle">
-                                <li><a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#" class="icoGoogle" title="Google +"><i class="fab fa-google-plus"></i></a></li>
-                            </ul>
-                        </div>
+                        <p class="text-muted"> </p>
+                        <input type="text" name="" placeholder="Usuario">
+                        <input type="password" name="" placeholder="Password">
+                        <a class="forgot text-muted" href="#">Forgot password?</a>
+                        <input type="submit" name="" value="Login" href="#" class="text-orange">
+
                     </form>
                 </div>
             </div>
