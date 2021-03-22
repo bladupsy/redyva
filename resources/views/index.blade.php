@@ -16,7 +16,7 @@
             font-family: 'Montserrat', sans-serif;
         }
 
-        #iconoFecha{
+        #iconoFecha {
             color: #e94d1a;
         }
 
@@ -178,22 +178,22 @@
             padding: 0.75rem;
             border-top: 1px dashed #000 !important;
         }
+
         .grupo-botones {
             margin-left: 60px;
         }
 
-        #linkPuntos{
+        #linkPuntos {
             margin-bottom: 15px;
             margin-left: -20px;
             font-weight: bold;
         }
 
-        .linkVarios:hover{
+        .linkVarios:hover {
             transition: .4s;
             text-decoration: none;
             font-size: 40px;
         }
-        
     </style>
 </head>
 
@@ -244,8 +244,10 @@
 
                                 </p>
                             </div>
-                            <div class="modal-footer">
-                                <h4 class="">Se entregan: <h4>
+                            <div class="modal-footer ">
+                                <div class="entrega">
+                                    <h4 class="">se entregan: los viernes<h4>
+                                </div>
                             </div>
                         </div>
 
@@ -283,13 +285,16 @@
             <script type="text/javascript">
                 //Cargando nuestro mapa
                 var markers = [
-                    ["León", -27.38441, -55.9015],
-                    ["Zamora", -27.40522, -55.89658],
+                    ["B° Villa Urquiza", -27.38441, -55.9015],
+                    ["Sede Central", -27.40522, -55.89658],
                     ["Aeroclub", -27.4112, -55.95716],
                     ["B° El progreso", -27.41117, -55.90818],
+                    ["B°  Néstor Kirchner, -27.4532, -55.9335"],
+                    ["B° Vecinos unidos, -27.40060, -55.892313"],
+                    ["hola", -27.40060, -55.892313],
 
                 ];
-                var zoom = 6;
+                var zoom = 10;
 
                 var mapsipe = L.map('map').
                 setView([-27.3812, -55.9196], 15); //[38.6202, -0.5731] es la latitud y longitud de la zona que queremos mostrar, en nuestro caso Ibi 
@@ -328,7 +333,7 @@
                 <div class="col"><img src="{{ asset('img/iconos/SENASA.png') }}"></div>
                 <div class="col"><img src="{{ asset('img/iconos/INTA.png') }}"></div>
                 <div class="col"><img src="{{ asset('img/iconos/Gob-Nac.png') }}"></div>
-                <div class="col"><img src="{{ asset('img/iconos/scra.png') }}"></div>
+
             </div>
             <hr class="line-icon">
 
