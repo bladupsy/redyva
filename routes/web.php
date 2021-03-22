@@ -46,6 +46,9 @@ Route::get('pdf', [App\Http\Controllers\PdfController::class, 'generarPdf']);
 Route::get('/formulario', function () {
     return view('formulario');
 });
+Route::get('/admin', function () {
+    return view('admin');
+});
 
 //Rutas de Dahsboard
 

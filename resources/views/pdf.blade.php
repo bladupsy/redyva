@@ -1,4 +1,6 @@
-<h1>Comprobante Pedido</h1><br>
+<h1>Comprobante Pedido</h1>
+<hr>
+<br>
 <br>
 <p>Nombre: <b><?php echo $nom ?></b> </p>
 <p>Apellido: <b><?php echo $ape ?></b> </p>

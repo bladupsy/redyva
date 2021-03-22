@@ -194,6 +194,43 @@
             text-decoration: none;
             font-size: 40px;
         }
+
+        .pie-pagina {
+            background-color: #e94d1a;
+            min-height: 50px;
+        }
+
+        .fondo-form {
+            background-image: url("{{ asset('img/chacra.png') }}");
+            background-size: cover;
+            padding-top: 200px;
+            min-height: 850px;
+
+
+        }
+
+        .formulario-pomelo {
+            margin-left: 550px;
+            padding-bottom: -5px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+
+        }
+
+        .formulario-contacto {
+            margin-left: 100px;
+        }
+
+        .center-misiones {
+            align-items: center;
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        .boton-form {
+            margin-left: 320px;
+            margin-top: 15px;
+        }
     </style>
 </head>
 
@@ -312,6 +349,78 @@
 
         </div>
     </article>
+    <article class="container-fluid fondo-form">
+        <div class="card mb-3 formulario-pomelo" style="max-width: 800px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src=" {{ asset('img/pomelo.png')}}" height="375px;">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body formulario-contacto">
+                        <h5 class="card-title">Contacto</h5>
+                        <hr>
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-4">
+                                <label for="validationCustom01" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="validationCustom01" value="Pablo" required>
+                                <div class="valid-feedback">
+                                    Muy bien!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom02" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                                <div class="valid-feedback">
+                                    Muy bien!
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="inputEmail4" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="validationCustom03" value="correo" required>
+                                <div class="valid-feedback">
+                                    Muy bien!
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="validationTextarea" class="form-label">Comentario</label>
+                                <textarea class="form-control" id="validationTextarea" placeholder="Deja tu comentario" required></textarea>
+                                <div class="valid-feedback">
+                                    Muy bien!
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <button class="btn btn-success rounded-pill boton-form" type="submit">Enviar</button>
+                            </div>
+                        </form>
+                        <script>
+                            // Example starter JavaScript for disabling form submissions if there are invalid fields
+                            (function() {
+                                'use strict'
+
+                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                var forms = document.querySelectorAll('.needs-validation')
+
+                                // Loop over them and prevent submission
+                                Array.prototype.slice.call(forms)
+                                    .forEach(function(form) {
+                                        form.addEventListener('submit', function(event) {
+                                            if (!form.checkValidity()) {
+                                                event.preventDefault()
+                                                event.stopPropagation()
+                                            }
+
+                                            form.classList.add('was-validated')
+                                        }, false)
+                                    })
+                            })();
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </article>
     <article class="container-fluid footer">
         <div class="container fondo-icon">
             <hr class="line-icon">
@@ -340,6 +449,13 @@
         </div>
     </article>
 
+
+
+
+
+    <footer class="container-fluid pie-pagina">
+        <h5 class="text-light center-misiones">Hecho con esfuerzo y cariño desde Misiones</h5>
+    </footer>
 
     <script src="{{asset('js/app.js')}}" type="text/javascript"></script>
 </body>
