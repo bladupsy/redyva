@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
-@charset "UTF-8";
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -4755,10 +4755,6 @@ input[type="button"].btn-block {
     margin-bottom: 0.75rem;
 }
 
-.card-subtitle {
-   
-}
-
 .card-text:last-child {
     margin-bottom: 0;
 }
@@ -5943,8 +5939,11 @@ a.close.disabled {
     border-bottom-right-radius: calc(0.3rem - 1px);
     border-bottom-left-radius: calc(0.3rem - 1px);
 }
+
 .modal-footer > * {
     margin: 0.25rem;
+    margin-left: 35px;
+    padding-left: 35px;
 }
 
 .modal-scrollbar-measure {
@@ -16365,7 +16364,7 @@ a.close.disabled {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding: 0.75rem;
     border-top: 1px solid #dee2e6;
     border-bottom-right-radius: calc(0.3rem - 1px);
@@ -16373,6 +16372,8 @@ a.close.disabled {
 }
 .modal-footer > * {
     margin: 0.25rem;
+       margin-left: 35px;
+    padding-left: 35px;
 }
 
 .modal-scrollbar-measure {
