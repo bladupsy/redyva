@@ -15,6 +15,7 @@ class AdminModel extends Model
         $id = (int)$identificador;
         
         $consulta = DB::table('pedidos')
+            ->orderBy('idpedidos', 'desc')
             ->where('id_bolson', $id)
             ->skip($offset)->take($cantMax)->get();
 
@@ -42,4 +43,5 @@ class AdminModel extends Model
         
         return $registroEditado;
     }
+
 }

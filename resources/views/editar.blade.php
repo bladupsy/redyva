@@ -101,6 +101,16 @@
             letter-spacing: -0.03em;
 
         }
+
+        #div-volver{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            padding-top: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -113,6 +123,9 @@
             </div>
         </div>
         <div class="card card-center mx-auto" style="width:  35rem;">
+        <div id="div-volver">
+            <a type="button" class="btn btn-outline-orange rounded-pill" href="/dashboard" id="volverDashboard">Volver al Dashboard</a>
+        </div>
             <div class="card-body">
                 <hr class="line-one">
                 <div>

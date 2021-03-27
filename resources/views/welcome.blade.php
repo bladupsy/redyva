@@ -12,6 +12,13 @@
   <title>RedyVa</title>
 
   <style>
+
+    #cabecera{
+      background-color: #f9fafc;
+      top: 0;
+      position: sticky;
+    }
+
     #fondo-presentacion {
       margin: 0;
       background-image: url("{{ asset('img/perejil.png') }}");
@@ -23,8 +30,14 @@
       font-style: normal;
       color: #f86a0c !important;
 
-
     }
+
+    #fondoText{
+      background-color: rgba(230, 230, 230, 0.65);
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
   </style>
 
 
@@ -32,7 +45,7 @@
 
 <body>
 
-  <div class="container-sm">
+  <div id="cabecera" class="container-sm">
     <ul class="navbar justify-content-center">
 
       <a class="navbar-brank ">
@@ -50,7 +63,7 @@
 
   <article class="container-fluid" id="fondo-presentacion">
 
-    <div class="row justify-content-md-center">
+    <div id="fondoText" class="row justify-content-md-center">
       <div class="col col-lg-2">
         <img src="{{ asset('img/redyva.png') }}">
       </div>

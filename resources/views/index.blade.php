@@ -29,8 +29,6 @@
         }
 
         .parte1 {
-
-
             font-family: 'Montserrat', sans-serif;
             font-style: normal;
             font-weight: 500;
@@ -77,8 +75,6 @@
             font-size: 30px;
             color: white;
             font-weight: italic;
-
-
         }
 
         .conoce {
@@ -197,7 +193,10 @@
 
         .pie-pagina {
             background-color: #e94d1a;
-            min-height: 50px;
+            min-height: 75px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .fondo-form {
@@ -205,8 +204,6 @@
             background-size: cover;
             padding-top: 200px;
             min-height: 850px;
-
-
         }
 
         .formulario-pomelo {
@@ -231,13 +228,18 @@
             margin-left: 320px;
             margin-top: 15px;
         }
+
+        #btn-submit{
+            margin-right: 35px;
+        }
+
     </style>
 </head>
 
 <body>
 
 
-    <nav class="navbar navbar-light ">
+    <nav id="nav-cabecera"  class="navbar navbar-light ">
         <div class="container-sm">
             <a class="navbar-brand" href="index">
                 <img src="{{ asset('img/redyva.png') }}" width="53" height="53">
@@ -247,12 +249,8 @@
                 <a class="nav-link text-orange" href="hacen">Qué <br>hacemos</a>
                 <a class="nav-link text-orange" href="bolson"> Conseguí <br>tú bolsón</a>
                 <a class="nav-link text-orange" href="puntos">Puntos de<br> distribución</a>
-
-
             </ul>
         </div>
-
-
     </nav>
     <article class="container-fluid fondo-inicio">
         <div class="container-sm">
@@ -360,23 +358,23 @@
                         <h5 class="card-title">Contacto</h5>
                         <hr>
                         <form class="row g-3 needs-validation" novalidate>
-                            <div class="col-md-4">
+                            <div class="col-md-12">
                                 <label for="validationCustom01" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="validationCustom01" value="Pablo" required>
+                                <input placeholder="Deja tu Nombre" type="text" class="form-control" id="validationCustom01" value="" required>
                                 <div class="valid-feedback">
                                     Muy bien!
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <!-- <div class="col-md-4">
                                 <label for="validationCustom02" class="form-label">Apellido</label>
                                 <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
                                 <div class="valid-feedback">
                                     Muy bien!
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-12">
                                 <label for="inputEmail4" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="validationCustom03" value="correo" required>
+                                <input placeholder="Deja tu correo" type="email" class="form-control" id="validationCustom03" value="" required>
                                 <div class="valid-feedback">
                                     Muy bien!
                                 </div>
@@ -389,7 +387,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12">
+                            <div id="btn-submit" class="col-12">
                                 <button class="btn btn-success rounded-pill boton-form" type="submit">Enviar</button>
                             </div>
                         </form>
@@ -442,16 +440,11 @@
                 <div class="col"><img src="{{ asset('img/iconos/SENASA.png') }}"></div>
                 <div class="col"><img src="{{ asset('img/iconos/INTA.png') }}"></div>
                 <div class="col"><img src="{{ asset('img/iconos/Gob-Nac.png') }}"></div>
-
             </div>
             <hr class="line-icon">
 
         </div>
     </article>
-
-
-
-
 
     <footer class="container-fluid pie-pagina">
         <h5 class="text-light center-misiones">Hecho con esfuerzo y cariño desde Misiones</h5>

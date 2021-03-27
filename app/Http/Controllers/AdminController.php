@@ -83,4 +83,5 @@ class AdminController extends Controller
 
         return $insertar;
     }
+
 }

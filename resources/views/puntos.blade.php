@@ -99,7 +99,7 @@
 
           <i class="fas fa-angle-right"></i> B° El Porvenir II (MZ «B» lote 3)
             CTD Aníbal Verón Nacional
-            <i class="fas fa-angle-right"></i> Iris 376686078 ó Marianela 3765128412<br><br>
+            / Iris 376686078 ó Marianela 3765128412<br><br>
             <i class="fas fa-angle-right"></i> B° San Isidro "A" (Mz 3 casa 16. Av Fangio) / Yanina 3765060978 <br>
 
             <i class="fas fa-angle-right"></i> B° San Isidro "B" (Mz 10 casa 01)
