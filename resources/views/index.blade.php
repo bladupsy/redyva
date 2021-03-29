@@ -210,7 +210,7 @@
         }
 
         .formulario-pomelo {
-            margin-left: 550px;
+            margin-left: 330px;
             padding-bottom: -5px;
             font-family: 'Montserrat', sans-serif;
             font-size: 15px;
