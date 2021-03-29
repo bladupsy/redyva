@@ -172,27 +172,36 @@
     <script>
         $(document).ready(function(){
 
-            $('btn-send').click(function(){
-                
-            let usuario = $('#user').val();
-            let contrasena = $('#pass').val();
+            $('#user').css('color', '#000');
+            $('#pass').css('color', '#000');
 
-            $.ajax({
-                url: 'log',
-                type: 'post',
-                data: {
-                    usuario : usuario,
-                    contrasena : contrasena
-                },
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                success: function(response){
-                    console.log(response);
-                },
-                error: function(){
-                    alert("No existe el usuario o Puso mal la password")
-                }
+            $('#btn-send').click(function(){
+
+                let usuario = $('#user').val();
+                let contrasena = $('#pass').val();
+                $('#user').val("");
+                $('#pass').val("");
+                
+                $.ajax({
+                    url: 'log',
+                    type: 'post',
+                    data: {
+                        usuario : usuario,
+                        contrasena : contrasena
+                    },
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    
+                    success: function(response){
+                        $.each(response, function(index, value){
+                            console.log(value.username);
+                            console.log(value.password);
+                        })
+                    },
+                    error: function(){
+                        alert("No existe el usuario o Puso mal la password");
+                    }
 
                 })
             })

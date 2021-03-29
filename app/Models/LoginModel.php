@@ -12,20 +12,13 @@ class LoginModel extends Model
 
     // Verifica la exitencia del usuario y la contraseña
     function verifyUser($usuar, $contrasena){
-        $bandera = null;
-
+    
         // Verifico si exite
-        if($verify = DB::table('users')
+        $verify = DB::table('users')
                     ->select('username', 'password')
                     ->where('username', $usuar)
                     ->where('password', $contrasena)
-                    ->get()->exist()
-        ){
-            $bandera = true;
-            return  $bandera;
-        } else{
-            $bandera = false;
-            return $bandera;
-        }
+                    ->get();
+        return $verify;
     }
 }
