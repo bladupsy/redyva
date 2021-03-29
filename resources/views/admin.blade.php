@@ -1,31 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <title>Administrador Redyva</title>
     <style>
         body {
             font-family: sans-serif;
             background-image: url("{{ asset('img/chacra.png') }}");
             background-size: cover;
-
-
         }
 
         .box {
             width: 500px;
-
             position: absolute;
             top: 25%;
             left: 35%;
             background: #fff;
-            ;
             text-align: center;
             transition: 0.25s;
-
         }
 
         .box input[type="text"],
@@ -142,28 +137,76 @@
             transition: all 0.8s;
             transition: all 0.8s
         }
+
+        #btn-send{
+            color: #2ecc71;
+        }
+        #btn-send:hover{
+            color: #fff;
+        }
+        #titulo{
+            color: #e94d1a;
+        }
+
     </style>
 </head>
-
 <body>
     <div class="container">
         <div class="">
             <div class="">
                 <div class="card">
-                    <form onsubmit="event.preventDefault()" class="box">
-                        <h1>Login</h1>
+                <form onsubmit="event.preventDefault()" class="box">
+                        <h1 id="titulo">Login</h1>
                         <p class="text-muted"> </p>
-                        <input type="text" name="" placeholder="Usuario">
-                        <input type="password" name="" placeholder="Password">
+                        <input id="user" type="text" name="" placeholder="Usuario">
+                        <input id="pass" type="password" name="" placeholder="Contraseña">
                         <a class="forgot text-muted" href="#">Forgot password?</a>
-                        <input type="submit" name="" value="Login" href="#" class="text-orange">
+                        <input id="btn-send" type="submit" name="" value="Login" href="#" class="text-orange">
+                        <meta name="csrf-token" content="<?php echo csrf_token()?>">
 
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function(){
 
+            $('#user').css('color', '#000');
+            $('#pass').css('color', '#000');
+
+            $('#btn-send').click(function(){
+
+                let usuario = $('#user').val();
+                let contrasena = $('#pass').val();
+                $('#user').val("");
+                $('#pass').val("");
+                
+                $.ajax({
+                    url: 'log',
+                    type: 'post',
+                    data: {
+                        usuario : usuario,
+                        contrasena : contrasena
+                    },
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    
+                    success: function(response){
+                        $.each(response, function(index, value){
+                            console.log(value.username);
+                            console.log(value.password);
+                        })
+                    },
+                    error: function(){
+                        alert("No existe el usuario o Puso mal la password");
+                    }
+
+                })
+            })
+        })
+
+    </script>
 </body>
-
 </html>

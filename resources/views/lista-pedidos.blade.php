@@ -20,6 +20,37 @@
             display: flex;
             justify-content: space-between;
         }
+
+        #div-volver{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+
+        #volverDashboard{
+            margin-bottom: -20px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #edit{
+            text-decoration: none;
+            color: #e94d1a;
+            padding-left: 5px;
+            padding-right: 5px;
+            transition: .3s;
+        }
+
+        #edit:hover{
+            font-size: 20px;
+            transition: .4s;
+            border: 1px solid #e94d1a;
+        }
+
     </style>
 </head>
 <body>
@@ -30,6 +61,9 @@
             </a>
         </div>
     </nav>
+    <div id="div-volver">
+        <a type="button" class="btn btn-outline-orange rounded-pill" href="/dashboard" id="volverDashboard">Volver al Dashboard</a>
+    </div>
     <div class="container tabla">
         <table class="table table-bordered">
             <thead class="table-dark">
@@ -50,12 +84,12 @@
             </tbody>
         </table>
         <div>
-        <div><p>Páginas: </p> <input readonly size="2" id="valorpagina" value=""> de <input readonly size="2" id="valorCantidad" value=""></p></div>
+        <div><p></p> <input readonly size="2" id="valorpagina" value=""> de <input readonly size="2" id="valorCantidad" value=""></p></div>
         <ul id="paginar">
-            <li><a id="idFirst" href="#">Primera Página</a></li>
-            <li><a id="idAnterior" href="#">Anterior</a></li>
-            <li><a id="idSiguiente" href="#">Siguiente</a></li>
-            <li><a id="idLast" href="#">Última Página</a></li>
+            <li><a class="btn btn-outline-dark" id="idFirst" href="#">Primera Página</a></li>
+            <li><a class="btn btn-outline-dark" id="idAnterior" href="#">Anterior</a></li>
+            <li><a class="btn btn-outline-dark" id="idSiguiente" href="#">Siguiente</a></li>
+            <li><a class="btn btn-outline-dark" id="idLast" href="#">Última Página</a></li>
         </ul>
 
         <input id="identificador" style="color: white; border: 1px solid white;" type="text" value="<?php echo $id?>" readonly>
@@ -129,7 +163,7 @@
                             <td>${value.id_sucursal}</td>
                             <td>${value.id_bolson}</td>
                             <td>${value.aDomicilio}</td>
-                            <td> <a href="/insertar?id=${value.idpedidos}&nombre=${value.nombre}&apellido=${value.apellido}&email=${value.email}&direccion=${value.direccion}&sucursal=${value.id_sucursal}&bolson=${value.id_bolson}&forma=${value.aDomicilio}">✐</a></td>
+                            <td> <a id="edit" href="/insertar?id=${value.idpedidos}&nombre=${value.nombre}&apellido=${value.apellido}&email=${value.email}&direccion=${value.direccion}&sucursal=${value.id_sucursal}&bolson=${value.id_bolson}&forma=${value.aDomicilio}">✐</a></td>
                         </tr>
                         `)
                     })

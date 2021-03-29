@@ -46,11 +46,6 @@ Route::get('pdf', [App\Http\Controllers\PdfController::class, 'generarPdf']);
 Route::get('/formulario', function () {
     return view('formulario');
 });
-Route::get('/admin', function () {
-    return view('admin');
-});
-
-//Rutas de Dahsboard
 
 //Ruta de Administrador
 Route::get('/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard']);
@@ -59,3 +54,5 @@ Route::get('/listarExistencias', [App\Http\Controllers\AdminController::class, '
 Route::get('/cantidad', [App\Http\Controllers\AdminController::class, 'cantidad']);
 Route::get('/insertar', [App\Http\Controllers\AdminController::class, 'insertar']);
 Route::get('/editar', [App\Http\Controllers\AdminController::class, 'editar']);
+Route::get('/admin', [App\Http\Controllers\LoginController::class, 'loginAdmin']); // Login Ruta
+Route::post('/log', [App\Http\Controllers\LoginController::class, 'loguear']); // Login Ruta
